@@ -72,6 +72,7 @@
 		1E8C52C01A6BC0B50095402F = {
 			isa = PBXGroup;
 			children = (
+				1E8C52F11A6BC0C60095402F /* Framework */,
 				1E8C52CB1A6BC0B50095402F /* Aratan */,
 				1E8C52E41A6BC0B50095402F /* AratanTests */,
 				1E8C52CA1A6BC0B50095402F /* Products */,
@@ -96,7 +97,6 @@
 				1E8C52D81A6BC0B50095402F /* Images.xcassets */,
 				1E8C52DA1A6BC0B50095402F /* LaunchScreen.xib */,
 				1E8C52D01A6BC0B50095402F /* Aratan.xcdatamodeld */,
-				1E8C52F11A6BC0C60095402F /* Framework */,
 				1E8C52CC1A6BC0B50095402F /* Supporting Files */,
 				1E8C52FA1A6BC0D30095402F /* Aratan-Bridging-Header.h */,
 			);
@@ -136,7 +136,8 @@
 				1E8C52F41A6BC0C60095402F /* OpenEars.framework */,
 				1E8C52F51A6BC0C60095402F /* Slt.framework */,
 			);
-			path = Framework;
+			name = Framework;
+			path = Aratan/Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
