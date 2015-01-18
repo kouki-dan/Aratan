@@ -14,6 +14,12 @@
 		1E8C52931A6BB3A70095402F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E8C52921A6BB3A70095402F /* Images.xcassets */; };
 		1E8C52961A6BB3A70095402F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E8C52941A6BB3A70095402F /* LaunchScreen.xib */; };
 		1E8C52A21A6BB3A70095402F /* AratanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C52A11A6BB3A70095402F /* AratanTests.swift */; };
+		1E8C52AC1A6BB4E40095402F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E8C52AB1A6BB4E40095402F /* AudioToolbox.framework */; };
+		1E8C52AE1A6BB4EB0095402F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E8C52AD1A6BB4EB0095402F /* AVFoundation.framework */; };
+		1E8C52B41A6BBAF30095402F /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1E8C52B01A6BBAF30095402F /* AcousticModelEnglish.bundle */; };
+		1E8C52B51A6BBAF30095402F /* AcousticModelSpanish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1E8C52B11A6BBAF30095402F /* AcousticModelSpanish.bundle */; };
+		1E8C52B61A6BBAF30095402F /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E8C52B21A6BBAF30095402F /* OpenEars.framework */; };
+		1E8C52B71A6BBAF30095402F /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E8C52B31A6BBAF30095402F /* Slt.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +44,13 @@
 		1E8C529B1A6BB3A70095402F /* AratanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AratanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E8C52A01A6BB3A70095402F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E8C52A11A6BB3A70095402F /* AratanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AratanTests.swift; sourceTree = "<group>"; };
+		1E8C52AB1A6BB4E40095402F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		1E8C52AD1A6BB4EB0095402F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1E8C52B01A6BBAF30095402F /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
+		1E8C52B11A6BBAF30095402F /* AcousticModelSpanish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelSpanish.bundle; sourceTree = "<group>"; };
+		1E8C52B21A6BBAF30095402F /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
+		1E8C52B31A6BBAF30095402F /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
+		1E8C52BF1A6BBC490095402F /* Aratan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aratan-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +58,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E8C52B71A6BBAF30095402F /* Slt.framework in Frameworks */,
+				1E8C52AE1A6BB4EB0095402F /* AVFoundation.framework in Frameworks */,
+				1E8C52AC1A6BB4E40095402F /* AudioToolbox.framework in Frameworks */,
+				1E8C52B61A6BBAF30095402F /* OpenEars.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +78,8 @@
 		1E8C527A1A6BB3A70095402F = {
 			isa = PBXGroup;
 			children = (
+				1E8C52AD1A6BB4EB0095402F /* AVFoundation.framework */,
+				1E8C52AB1A6BB4E40095402F /* AudioToolbox.framework */,
 				1E8C52851A6BB3A70095402F /* Aratan */,
 				1E8C529E1A6BB3A70095402F /* AratanTests */,
 				1E8C52841A6BB3A70095402F /* Products */,
@@ -85,6 +104,8 @@
 				1E8C52921A6BB3A70095402F /* Images.xcassets */,
 				1E8C52941A6BB3A70095402F /* LaunchScreen.xib */,
 				1E8C528A1A6BB3A70095402F /* Aratan.xcdatamodeld */,
+				1E8C52BF1A6BBC490095402F /* Aratan-Bridging-Header.h */,
+				1E8C52AF1A6BBAF30095402F /* Framework */,
 				1E8C52861A6BB3A70095402F /* Supporting Files */,
 			);
 			path = Aratan;
@@ -113,6 +134,17 @@
 				1E8C52A01A6BB3A70095402F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1E8C52AF1A6BBAF30095402F /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				1E8C52B01A6BBAF30095402F /* AcousticModelEnglish.bundle */,
+				1E8C52B11A6BBAF30095402F /* AcousticModelSpanish.bundle */,
+				1E8C52B21A6BBAF30095402F /* OpenEars.framework */,
+				1E8C52B31A6BBAF30095402F /* Slt.framework */,
+			);
+			path = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +228,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E8C52911A6BB3A70095402F /* Main.storyboard in Resources */,
+				1E8C52B51A6BBAF30095402F /* AcousticModelSpanish.bundle in Resources */,
+				1E8C52B41A6BBAF30095402F /* AcousticModelEnglish.bundle in Resources */,
 				1E8C52961A6BB3A70095402F /* LaunchScreen.xib in Resources */,
 				1E8C52931A6BB3A70095402F /* Images.xcassets in Resources */,
 			);
@@ -342,9 +376,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Aratan/Framework",
+				);
 				INFOPLIST_FILE = Aratan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Aratan/Aratan-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -352,9 +393,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Aratan/Framework",
+				);
 				INFOPLIST_FILE = Aratan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Aratan/Aratan-Bridging-Header.h";
 			};
 			name = Release;
 		};
