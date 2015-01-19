@@ -9,21 +9,13 @@
 import UIKit
 
 class QuizViewController: UIViewController {
+    var quiz:QuizModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let wordsArray = [
-            ["WORD", "ALOUD", "SPEAK", "TANGO", "LEARNING", "NEXT"],
-            ["TEST", "PLAY", "FIX", "SUPER", "GOING", "NEXT"],
-            ["HAVE", "RICH", "GOOD", "Python", "MAIN", "NEXT"],
-            ["PRODUCT", "SCIENCE", "HEAD", "MAINTAIN", "NOW", "NEXT"],
-            ["TRAIN", "CREED", "STATUE", "LIBERTY", "LITTLE", "NEXT"],
-            ["REALIZE", "OBJECT", "ART", "ABSTRACT", "RICHIE", "NEXT"],
-            ["IMPULSE", "SOMETHING", "SALE", "LUXURIES", "PURCHASE", "NEXT"],
-            ["ANTICIPATE", "EMPLOY", "CUT", "COMPETENT", "MECHANIC", "NEXT"],
-            ["BIRTHRATE", "STEADILY", "INHABITANT", "MUCH", "RECOMMEND", ],
-        ]
+        quiz = QuizModel([])
         
         
     }

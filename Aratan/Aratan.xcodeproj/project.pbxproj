@@ -20,6 +20,8 @@
 		1E8C52F91A6BC0C60095402F /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E8C52F51A6BC0C60095402F /* Slt.framework */; };
 		1E8C52FE1A6BF95A0095402F /* WordsRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C52FD1A6BF95A0095402F /* WordsRecognition.swift */; };
 		1E8C53001A6D280F0095402F /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C52FF1A6D280F0095402F /* QuizViewController.swift */; };
+		1E8C53041A6D33C10095402F /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C53031A6D33C10095402F /* QuizModel.swift */; };
+		1E8C53061A6D33E40095402F /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C53051A6D33E40095402F /* QuestionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		1E8C52FA1A6BC0D30095402F /* Aratan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aratan-Bridging-Header.h"; sourceTree = "<group>"; };
 		1E8C52FD1A6BF95A0095402F /* WordsRecognition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsRecognition.swift; sourceTree = "<group>"; };
 		1E8C52FF1A6D280F0095402F /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		1E8C53031A6D33C10095402F /* QuizModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
+		1E8C53051A6D33E40095402F /* QuestionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 				1E8C52D31A6BC0B50095402F /* ViewController.swift */,
 				1E8C52FD1A6BF95A0095402F /* WordsRecognition.swift */,
 				1E8C52FF1A6D280F0095402F /* QuizViewController.swift */,
+				1E8C53031A6D33C10095402F /* QuizModel.swift */,
+				1E8C53051A6D33E40095402F /* QuestionModel.swift */,
 				1E8C52D51A6BC0B50095402F /* Main.storyboard */,
 				1E8C52D81A6BC0B50095402F /* Images.xcassets */,
 				1E8C52DA1A6BC0B50095402F /* LaunchScreen.xib */,
@@ -248,10 +254,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E8C53061A6D33E40095402F /* QuestionModel.swift in Sources */,
 				1E8C52D41A6BC0B50095402F /* ViewController.swift in Sources */,
 				1E8C53001A6D280F0095402F /* QuizViewController.swift in Sources */,
 				1E8C52FE1A6BF95A0095402F /* WordsRecognition.swift in Sources */,
 				1E8C52D21A6BC0B50095402F /* Aratan.xcdatamodeld in Sources */,
+				1E8C53041A6D33C10095402F /* QuizModel.swift in Sources */,
 				1E8C52CF1A6BC0B50095402F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
