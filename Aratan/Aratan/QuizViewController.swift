@@ -15,8 +15,15 @@ class QuizViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        quiz = QuizModel([])
+        if quiz == nil {
+            quiz = QuizModel()
+            // It is for test.
+            quiz.loadQuiz(1)
+        }
         
+    }
+    
+    func loadQuestion(){
         
     }
     

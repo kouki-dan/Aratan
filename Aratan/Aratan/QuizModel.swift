@@ -35,7 +35,14 @@ class QuizModel{
             ["ANTICIPATE", "EMPLOY", "CUT", "COMPETENT"],
             ["BIRTHRATE", "STEADILY", "INHABITANT", "MUCH"],
         ]
-        // Incompletion
+        for words in wordsArray {
+            let question = QuestionModel()
+            question.words = words
+            question.answerMeaning = words[0]
+            self.questions.append(question)
+            
+        }
+        
         // Until here
     }
 
