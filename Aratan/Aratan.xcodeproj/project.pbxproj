@@ -19,6 +19,7 @@
 		1E8C52F81A6BC0C60095402F /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E8C52F41A6BC0C60095402F /* OpenEars.framework */; };
 		1E8C52F91A6BC0C60095402F /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E8C52F51A6BC0C60095402F /* Slt.framework */; };
 		1E8C52FE1A6BF95A0095402F /* WordsRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C52FD1A6BF95A0095402F /* WordsRecognition.swift */; };
+		1E8C53001A6D280F0095402F /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C52FF1A6D280F0095402F /* QuizViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		1E8C52F51A6BC0C60095402F /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
 		1E8C52FA1A6BC0D30095402F /* Aratan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aratan-Bridging-Header.h"; sourceTree = "<group>"; };
 		1E8C52FD1A6BF95A0095402F /* WordsRecognition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsRecognition.swift; sourceTree = "<group>"; };
+		1E8C52FF1A6D280F0095402F /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				1E8C52CE1A6BC0B50095402F /* AppDelegate.swift */,
 				1E8C52D31A6BC0B50095402F /* ViewController.swift */,
 				1E8C52FD1A6BF95A0095402F /* WordsRecognition.swift */,
+				1E8C52FF1A6D280F0095402F /* QuizViewController.swift */,
 				1E8C52D51A6BC0B50095402F /* Main.storyboard */,
 				1E8C52D81A6BC0B50095402F /* Images.xcassets */,
 				1E8C52DA1A6BC0B50095402F /* LaunchScreen.xib */,
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E8C52D41A6BC0B50095402F /* ViewController.swift in Sources */,
+				1E8C53001A6D280F0095402F /* QuizViewController.swift in Sources */,
 				1E8C52FE1A6BF95A0095402F /* WordsRecognition.swift in Sources */,
 				1E8C52D21A6BC0B50095402F /* Aratan.xcdatamodeld in Sources */,
 				1E8C52CF1A6BC0B50095402F /* AppDelegate.swift in Sources */,
