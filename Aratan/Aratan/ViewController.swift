@@ -8,30 +8,26 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
 
+    var w:WordsRecognition!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        OEPocketsphinxController.sharedInstance().setActive(true, error: nil)
+        let wordsArray = [
+            ["WORD", "ALOUD", "SPEAK", "TANGO", "LEARNING", "NEXT"],
+            ["TEST", "PLAY", "FIX", "SUPER", "GOING", "NEXT"],
+            ["HAVE", "RICH", "GOOD", "Python", "MAIN", "NEXT"],
+            ["PRODUCT", "SCIENCE", "HEAD", "MAINTAIN", "NOW", "NEXT"],
+            ["TRAIN", "CREED", "STATUE", "LIBERTY", "LITTLE", "NEXT"],
+            ["REALIZE", "OBJECT", "ART", "ABSTRACT", "RICHIE", "NEXT"],
+            ["IMPULSE", "SOMETHING", "SALE", "LUXURIES", "PURCHASE", "NEXT"],
+            ["ANTICIPATE", "EMPLOY", "CUT", "COMPETENT", "MECHANIC", "NEXT"],
+            ["BIRTHRATE", "STEADILY", "INHABITANT", "MUCH", "RECOMMEND", ],
+        ]
+        w = WordsRecognition(wordsArray)
         
-        let lmGenerator = OELanguageModelGenerator()
-        let words = ["WORD", "ALOUD", "SPEAK", "TANGO", "LEARNING"]
-        let name = "NameIWantForMyLanguageModelFiles";
-        
-        let err = lmGenerator.generateLanguageModelFromArray(words,
-            withFilesNamed: name,
-            forAcousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"))
-        
-
-        if err == nil{
-            let lmPath = lmGenerator.pathToSuccessfullyGeneratedLanguageModelWithRequestedName("NameIWantForMyLanguageModelFiles")
-            let dicPath = lmGenerator.pathToSuccessfullyGeneratedDictionaryWithRequestedName("NameIWantForMyLanguageModelFiles")
-        }
-        else{
-            print(err)
-        }
         
     }
 
