@@ -9,9 +9,10 @@
 import Foundation
 
 class QuestionModel{
-    var words:[String] = []// please replace this type, such as Word class
+    var words:String = ""
     var answerIndex:Int = 0
     var answerMeaning:String = ""
+    var correctNumber:Int = 0
     
     //please implement init function
 
