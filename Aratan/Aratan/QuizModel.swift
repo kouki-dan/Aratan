@@ -23,7 +23,7 @@ class QuizModel{
     }
     
     func nextQuestion() -> QuestionModel?{
-        return questions[index++]
+        return questions[++index]
     }
     
     func getWordsArray() -> [[String]] {
@@ -68,7 +68,6 @@ class QuizModel{
             question.words = words
             question.answerMeaning = words[0]
             self.questions.append(question)
-            
         }
         
         // Until here

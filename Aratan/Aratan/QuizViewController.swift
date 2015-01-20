@@ -47,10 +47,16 @@ class QuizViewController: UIViewController, WordsRecognitionDelegate {
     
     func recognizedWord(word: String) {
         //TODO
+        if quiz.checkAnswer(word) {
+            println("正解")
+        }
+        else{
+            println("不正解")
+        }
     }
     
     func putQuestion(){
-        if let question = quiz.nextQuestion() {
+        if let question = quiz.getNowQuestion() {
             meaning.text = question.answerMeaning
             for i in 0..<answers.count {
                 answers[i].text = question.words[i]

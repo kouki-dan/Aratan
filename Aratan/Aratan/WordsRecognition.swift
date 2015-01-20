@@ -18,7 +18,7 @@ class WordsRecognition: NSObject, OEEventsObserverDelegate{
     var dicPaths:[String] = []
     var amPath:String = ""
     var nowIndex = 0;
-    var delegate:WordsRecognitionDelegate!
+    var delegate:WordsRecognitionDelegate?
     
     var openEarsEventsObserver = OEEventsObserver()
     
@@ -74,7 +74,7 @@ class WordsRecognition: NSObject, OEEventsObserverDelegate{
         println(recognitionScore)
         println("-------------")
         
-        self.delegate.recognizedWord(hypothesis)
+        self.delegate?.recognizedWord(hypothesis)
         
         /*
         if hypothesis == "NEXT"{
