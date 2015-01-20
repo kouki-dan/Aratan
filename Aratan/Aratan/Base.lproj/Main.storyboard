@@ -226,6 +226,13 @@
                             <constraint firstItem="EbG-7x-Ea9" firstAttribute="height" secondItem="gjp-Sr-Q0t" secondAttribute="height" id="zcq-yp-XDr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answer1" destination="HnH-KS-0fw" id="gDz-DA-UHd"/>
+                        <outlet property="answer2" destination="gzb-Bh-JTd" id="UD0-an-nsy"/>
+                        <outlet property="answer3" destination="JWt-tk-hOw" id="pQW-35-duE"/>
+                        <outlet property="answer4" destination="I9P-zQ-wPO" id="pU3-bg-3gv"/>
+                        <outlet property="meaning" destination="8AE-cc-Whf" id="i4F-9T-mXJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="le3-A5-PAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,12 +8,17 @@
 
 import Foundation
 
+protocol WordsRecognitionDelegate {
+    func recognizedWord(word:String)
+}
+
 class WordsRecognition: NSObject, OEEventsObserverDelegate{
     var wordsArray:[[String]];
     var modelPaths:[String] = []
     var dicPaths:[String] = []
     var amPath:String = ""
     var nowIndex = 0;
+    var delegate:WordsRecognitionDelegate?
     
     var openEarsEventsObserver = OEEventsObserver()
     
@@ -68,10 +73,15 @@ class WordsRecognition: NSObject, OEEventsObserverDelegate{
         println(hypothesis)
         println(recognitionScore)
         println("-------------")
+        
+        self.delegate?.recognizedWord(hypothesis)
+        
+        /*
         if hypothesis == "NEXT"{
             self.nowIndex += 1
             listen(self.nowIndex)
         }
+        */
     }
     
     
