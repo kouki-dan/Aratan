@@ -23,6 +23,8 @@
 		1E8C53061A6D33E40095402F /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C53051A6D33E40095402F /* QuestionModel.swift */; };
 		1E8C53081A6DF4180095402F /* QuizModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C53071A6DF4180095402F /* QuizModelTest.swift */; };
 		1E8C530B1A6DF54F0095402F /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C52FF1A6D280F0095402F /* QuizViewController.swift */; };
+		1E8C530C1A6DF5680095402F /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C53051A6D33E40095402F /* QuestionModel.swift */; };
+		1E8C530D1A6DF56B0095402F /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C53031A6D33C10095402F /* QuizModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -271,6 +273,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E8C530D1A6DF56B0095402F /* QuizModel.swift in Sources */,
+				1E8C530C1A6DF5680095402F /* QuestionModel.swift in Sources */,
 				1E8C53081A6DF4180095402F /* QuizModelTest.swift in Sources */,
 				1E8C52E81A6BC0B50095402F /* AratanTests.swift in Sources */,
 			);
