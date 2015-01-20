@@ -9,11 +9,23 @@
 import Foundation
 
 class QuestionModel{
-    var words:String = ""
-    var answerIndex:Int = 0
-    var answerMeaning:String = ""
-    var correctNumber:Int = 0
+    var questionWord:String
+    var words:[String]
+    var answerIndex:Int
+    var answerMeaning:String
     
-    //please implement init function
+    init(){
+        self.questionWord = ""
+        self.words = []
+        self.answerIndex = 0
+        self.answerMeaning = ""
+    }
+    
+    init(_ questionWord:String,_ words:[String],_ answerIndex:Int,_ answerMeaning:String){
+        self.questionWord = questionWord
+        self.words = words
+        self.answerIndex = answerIndex
+        self.answerMeaning = answerMeaning
+    }
 
 }
