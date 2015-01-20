@@ -14,5 +14,11 @@ class QuestionModel{
     var answerMeaning:String = ""
     
     //please implement init function
-
+    
+    func checkAnswer(word:String) -> Bool {
+        if word == words[answerIndex] {
+            return true
+        }
+        return false
+    }
 }

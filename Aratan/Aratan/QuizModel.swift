@@ -10,11 +10,39 @@ import Foundation
 
 class QuizModel{
     var questions:[QuestionModel]
+    var index = 0
     init(){
         questions = []
     }
     init(_ questions:[QuestionModel]){
         self.questions = questions
+    }
+    
+    func getNowQuestion() -> QuestionModel?{
+        return questions[index]
+    }
+    
+    func nextQuestion() -> QuestionModel?{
+        return questions[index++]
+    }
+    
+    func getWordsArray() -> [[String]] {
+        var wordsArray:[[String]] = []
+        for question in questions {
+            var words = question.words
+            words.append("PASS")
+            wordsArray.append(words)
+        }
+        
+        return wordsArray
+    }
+    
+    func checkAnswer(word:String) -> Bool {
+        if let question = getNowQuestion() {
+            return question.checkAnswer(word)
+        }
+    
+        return false
     }
     
     func loadQuiz(level:Int){
