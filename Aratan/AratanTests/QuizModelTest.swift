@@ -14,7 +14,7 @@ class QuizModelTest: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-       
+        
         var questions:[QuestionModel] = []
         let wordsArray = [
             ["WORD", "ALOUD", "SPEAK", "TANGO"],
@@ -35,6 +35,8 @@ class QuizModelTest: XCTestCase {
         }
         
         quizModel = QuizModel(questions)
+        
+        quizModel.preSaveWords()
     }
     
     override func tearDown() {

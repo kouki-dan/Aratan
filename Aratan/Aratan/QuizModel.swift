@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 Team. Aratan. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import CoreData
 
 class QuizModel{
@@ -115,6 +115,25 @@ class QuizModel{
 
         
         // Until here
+    }
+    
+    func preSaveWords(){
+        let appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        let context: NSManagedObjectContext = appDelegate.managedObjectContext!
+        
+        let filePath = NSBundle.mainBundle().pathForResource("word.plist", ofType: nil)
+        let dic = NSDictionary(contentsOfFile: filePath!)
+        
+        let wordData: AnyObject = NSEntityDescription.insertNewObjectForEntityForName("Word", inManagedObjectContext: context)
+        
+        for var i = 1; i < dic!.count; i++ {
+            var item: NSArray  = dic![String(i)]! as NSArray
+            wordData.setValue(item[0],forKey: "word")
+            wordData.setValue(item[1],forKey: "answerMeaning")
+            wordData.setValue(item[2],forKey: "level")
+            context.save(nil)
+        }
+        
     }
     
 }
