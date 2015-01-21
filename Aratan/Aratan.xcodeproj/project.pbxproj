@@ -111,7 +111,9 @@
 				1E8C52FF1A6D280F0095402F /* QuizViewController.swift */,
 				1EA58A6A1A6F90D5001169D2 /* ResultViewController.swift */,
 				1E8C53031A6D33C10095402F /* QuizModel.swift */,
+				A315229E1A6F969000D7A760 /* Word.swift */,
 				1E8C53051A6D33E40095402F /* QuestionModel.swift */,
+				A315229B1A6F7E5C00D7A760 /* word.plist */,
 				1E8C52D51A6BC0B50095402F /* Main.storyboard */,
 				1E8C530E1A6F34C90095402F /* correct.png */,
 				1E8C530F1A6F34C90095402F /* wrong.png */,
@@ -241,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A315229C1A6F7E5C00D7A760 /* word.plist in Resources */,
 				1E8C52D71A6BC0B50095402F /* Main.storyboard in Resources */,
 				1E8C52F71A6BC0C60095402F /* AcousticModelSpanish.bundle in Resources */,
 				1E8C53101A6F34C90095402F /* correct.png in Resources */,
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E8C53061A6D33E40095402F /* QuestionModel.swift in Sources */,
+				A315229F1A6F969000D7A760 /* Word.swift in Sources */,
 				1E8C530B1A6DF54F0095402F /* QuizViewController.swift in Sources */,
 				1E8C52FE1A6BF95A0095402F /* WordsRecognition.swift in Sources */,
 				1EA58A6B1A6F90D5001169D2 /* ResultViewController.swift in Sources */,

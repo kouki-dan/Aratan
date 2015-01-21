@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 Team. Aratan. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import CoreData
 
 class QuizModel{
@@ -52,43 +52,67 @@ class QuizModel{
     }
     
     func loadQuiz(level:Int){
-        var quiz:[QuestionModel] = questions
-        
         // Please implement this.
         // Load a words from CoreData and construct this questions array.
+
         let appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
         let context: NSManagedObjectContext = appDelegate.managedObjectContext!
         
-        var request = NSFetchRequest(entityName: "Model")
+        var request = NSFetchRequest(entityName: "Word")
         request.predicate = NSPredicate(format: "level = %d", level)
-        /*
+    /*
+        //let wordEntity: NSEntityDescription! = NSEntityDescription.entityForName("Word", inManagedObjectContext: context)
         
+        var request = NSFetchRequest(entityName: "Word")
+        //request.predicate = NSPredicate(format: "level == %d", level)
+        
+        println(request)
+        println("-----")
+        println(context)
+        
+        println("-----")
+        var error:NSErrorPointer! = NSErrorPointer()
+        let results = context.executeFetchRequest(request, error: error)
+            
         if let results = context.executeFetchRequest(request, error: nil) {
             var checkRandomNumber = Dictionary<Int,String>()
             
-            var n = Int(arc4random() % UInt32(results.count)) + 1
-            checkRandomNumber[n] = "already exists"
+            var firsrWordIndex = Int(arc4random() % UInt32(results.count)) + 1
+            checkRandomNumber[firsrWordIndex] = "already exists"
             
-            var word = results[n].valueForKey("word") as String
-            var answer = results[n].valueForKey("answer") as String
+            var word = results[firsrWordIndex].valueForKey("word") as String
+            var answerMeaning = results[firsrWordIndex].valueForKey("answerMeaning") as String
+            var answerIndex = Int(arc4random() % 4) + 1
             
-            while quiz.count < 4{
-                var m = Int(arc4random() % UInt32(results.count)) + 1
-                if let tmp = checkRandomNumber[m] {
-                    continue
+            var words:[String] = []
+            words[answerIndex] = word
+            
+            for var i = 0; i < 10; i++ {
+                var wordCount = 0
+                while wordCount < 3 {
+                    var randomIndex = Int(arc4random() % UInt32(results.count)) + 1
+                    if let tmp = checkRandomNumber[randomIndex] {
+                        continue
+                    }
+                
+                    checkRandomNumber[randomIndex] = "already exists"
+                    words[wordCount] = results[randomIndex].valueForKey("word") as String
+                    wordCount++
                 }
                 
+                let question = QuestionModel()
+                question.words = words
+                question.answerIndex = answerIndex
+                question.answerMeaning = answerMeaning
+                //self.questions.append(question)
             }
-            
-            
-        }else{
-            println("データがとれてないよ")
         }
+
         
 */
         // The below is code for testing
         // TODO: Write!!
-        
+
         let wordsArray = [
             ["WORD", "ALOUD", "SPEAK", "TANGO"],
             ["TEST", "PLAY", "FIX", "SUPER"],
@@ -106,9 +130,28 @@ class QuizModel{
             question.answerMeaning = words[0]
             self.questions.append(question)
         }
+
         
         // Until here
     }
-
+    
+    func preSaveWords(){
+        let appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        let context: NSManagedObjectContext = appDelegate.managedObjectContext!
+        
+        let filePath = NSBundle.mainBundle().pathForResource("word.plist", ofType: nil)
+        let dic = NSDictionary(contentsOfFile: filePath!)
+        
+        let wordData: AnyObject = NSEntityDescription.insertNewObjectForEntityForName("Word", inManagedObjectContext: context)
+        
+        for var i = 1; i < dic!.count; i++ {
+            var item: NSArray  = dic![String(i)]! as NSArray
+            wordData.setValue(item[0],forKey: "word")
+            wordData.setValue(item[1],forKey: "answerMeaning")
+            wordData.setValue(item[2],forKey: "level")
+            context.save(nil)
+        }
+        
+    }
     
 }
