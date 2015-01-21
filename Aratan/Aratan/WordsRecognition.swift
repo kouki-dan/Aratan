@@ -13,7 +13,7 @@ protocol WordsRecognitionDelegate {
 }
 
 class WordsRecognition: NSObject, OEEventsObserverDelegate{
-    var wordsArray:[[String]];
+    var wordsArray:[[String]]
     var modelPaths:[String] = []
     var dicPaths:[String] = []
     var amPath:String = ""
@@ -25,7 +25,6 @@ class WordsRecognition: NSObject, OEEventsObserverDelegate{
     init(_ wordsArray:[[String]]){
         self.wordsArray = wordsArray
         super.init()
-
         
         OEPocketsphinxController.sharedInstance().setActive(true, error: nil)
         openEarsEventsObserver.delegate = self
@@ -65,7 +64,11 @@ class WordsRecognition: NSObject, OEEventsObserverDelegate{
                 languageModelIsJSGF: false)
             println("OK");
         }
-
+    }
+    
+    func next(){
+        self.nowIndex += 1
+        listen(self.nowIndex)
     }
     
     func pocketsphinxDidReceiveHypothesis(hypothesis: String!, recognitionScore: String!, utteranceID: String!) {

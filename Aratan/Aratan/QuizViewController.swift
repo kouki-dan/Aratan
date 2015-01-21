@@ -8,8 +8,19 @@
 
 import UIKit
 
+enum QuizStatus:Int{
+    case BeforeStarted
+    
+    case WaitingAnswer
+    case WaitingCorrectAnswer
+    case PreparingNextProblem
+    
+    case Finished
+}
+
 class QuizViewController: UIViewController, WordsRecognitionDelegate {
     var quiz:QuizModel!
+    var status = QuizStatus.BeforeStarted
     
     @IBOutlet weak var meaning: UILabel!
     
@@ -18,6 +29,8 @@ class QuizViewController: UIViewController, WordsRecognitionDelegate {
     @IBOutlet weak var answer3: UILabel!
     @IBOutlet weak var answer4: UILabel!
     
+    @IBOutlet weak var correctStatusView: UIView!
+    @IBOutlet weak var correctStatusImageView: UIImageView!
     
     var answers:[UILabel] = []
     var wordsRecognition:WordsRecognition!
@@ -37,6 +50,7 @@ class QuizViewController: UIViewController, WordsRecognitionDelegate {
         initRecognition()
         
         putQuestion()
+        self.status = .WaitingAnswer
     }
     
     func initRecognition(){
@@ -45,13 +59,64 @@ class QuizViewController: UIViewController, WordsRecognitionDelegate {
         wordsRecognition.delegate = self
     }
     
+    func correct(){
+        nextProblem()
+        correctStatusView.hidden = false
+        correctStatusImageView.image = UIImage(named: "correct.png")
+
+    }
+    
+    func wrong(){
+        status = .WaitingCorrectAnswer
+        correctStatusView.hidden = false
+        correctStatusImageView.image = UIImage(named: "wrong.png")
+        
+        // TODO: Call next problem when detected correct answer or giving up user input
+        nextProblem()
+    }
+    
+    func nextProblem(){
+        status = .PreparingNextProblem
+        
+        var timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("showNextProblem"), userInfo: nil, repeats: false)
+    }
+    
+    func showNextProblem(){
+        status = .WaitingAnswer
+        
+        correctStatusView.hidden = true
+        
+        if quiz.nextQuestion() == nil {
+            println("Quiz Ended")
+            status = .Finished
+            finish()
+        }
+        else {
+            self.putQuestion()
+            self.wordsRecognition.next()
+        }
+    }
+    
+    func finish(){
+        //Some processing
+    }
+    
     func recognizedWord(word: String) {
-        //TODO
+        if !(status == .WaitingAnswer || status == .WaitingCorrectAnswer){
+            return
+        }
         if quiz.checkAnswer(word) {
             println("正解")
+            if status == .WaitingCorrectAnswer {
+                nextProblem()
+            }
+            else {
+                correct()
+            }
         }
         else{
             println("不正解")
+            wrong()
         }
     }
     

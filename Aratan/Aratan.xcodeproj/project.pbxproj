@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1E8C52CF1A6BC0B50095402F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C52CE1A6BC0B50095402F /* AppDelegate.swift */; };
 		1E8C52D21A6BC0B50095402F /* Aratan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C52D01A6BC0B50095402F /* Aratan.xcdatamodeld */; };
-		1E8C52D41A6BC0B50095402F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C52D31A6BC0B50095402F /* ViewController.swift */; };
 		1E8C52D71A6BC0B50095402F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E8C52D51A6BC0B50095402F /* Main.storyboard */; };
 		1E8C52D91A6BC0B50095402F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E8C52D81A6BC0B50095402F /* Images.xcassets */; };
 		1E8C52DC1A6BC0B50095402F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E8C52DA1A6BC0B50095402F /* LaunchScreen.xib */; };
@@ -21,12 +20,14 @@
 		1E8C52FE1A6BF95A0095402F /* WordsRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C52FD1A6BF95A0095402F /* WordsRecognition.swift */; };
 		1E8C53041A6D33C10095402F /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C53031A6D33C10095402F /* QuizModel.swift */; };
 		1E8C53061A6D33E40095402F /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C53051A6D33E40095402F /* QuestionModel.swift */; };
-		1E8C53081A6DF4180095402F /* QuizModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C53071A6DF4180095402F /* QuizModelTest.swift */; };
 		1E8C530B1A6DF54F0095402F /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C52FF1A6D280F0095402F /* QuizViewController.swift */; };
 		1E8C530C1A6DF5680095402F /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C53051A6D33E40095402F /* QuestionModel.swift */; };
 		1E8C530D1A6DF56B0095402F /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C53031A6D33C10095402F /* QuizModel.swift */; };
 		A315229A1A6F756300D7A760 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C52CE1A6BC0B50095402F /* AppDelegate.swift */; };
 		A315229C1A6F7E5C00D7A760 /* word.plist in Resources */ = {isa = PBXBuildFile; fileRef = A315229B1A6F7E5C00D7A760 /* word.plist */; };
+		1E8C53101A6F34C90095402F /* correct.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8C530E1A6F34C90095402F /* correct.png */; };
+		1E8C53111A6F34C90095402F /* wrong.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8C530F1A6F34C90095402F /* wrong.png */; };
+		1E8C53141A6F823B0095402F /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C53131A6F823B0095402F /* TopViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +45,6 @@
 		1E8C52CD1A6BC0B50095402F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E8C52CE1A6BC0B50095402F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E8C52D11A6BC0B50095402F /* Aratan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Aratan.xcdatamodel; sourceTree = "<group>"; };
-		1E8C52D31A6BC0B50095402F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1E8C52D61A6BC0B50095402F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E8C52D81A6BC0B50095402F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1E8C52DB1A6BC0B50095402F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -62,6 +62,9 @@
 		1E8C53051A6D33E40095402F /* QuestionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		1E8C53071A6DF4180095402F /* QuizModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizModelTest.swift; sourceTree = "<group>"; };
 		A315229B1A6F7E5C00D7A760 /* word.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = word.plist; sourceTree = "<group>"; };
+		1E8C530E1A6F34C90095402F /* correct.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = correct.png; sourceTree = "<group>"; };
+		1E8C530F1A6F34C90095402F /* wrong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wrong.png; sourceTree = "<group>"; };
+		1E8C53131A6F823B0095402F /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,13 +110,15 @@
 			isa = PBXGroup;
 			children = (
 				1E8C52CE1A6BC0B50095402F /* AppDelegate.swift */,
-				1E8C52D31A6BC0B50095402F /* ViewController.swift */,
 				1E8C52FD1A6BF95A0095402F /* WordsRecognition.swift */,
+				1E8C53131A6F823B0095402F /* TopViewController.swift */,
 				1E8C52FF1A6D280F0095402F /* QuizViewController.swift */,
 				1E8C53031A6D33C10095402F /* QuizModel.swift */,
 				A315229B1A6F7E5C00D7A760 /* word.plist */,
 				1E8C53051A6D33E40095402F /* QuestionModel.swift */,
 				1E8C52D51A6BC0B50095402F /* Main.storyboard */,
+				1E8C530E1A6F34C90095402F /* correct.png */,
+				1E8C530F1A6F34C90095402F /* wrong.png */,
 				1E8C52D81A6BC0B50095402F /* Images.xcassets */,
 				1E8C52DA1A6BC0B50095402F /* LaunchScreen.xib */,
 				1E8C52D01A6BC0B50095402F /* Aratan.xcdatamodeld */,
@@ -135,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				1E8C52E71A6BC0B50095402F /* AratanTests.swift */,
-				1E8C53071A6DF4180095402F /* QuizModelTest.swift */,
 				1E8C52E51A6BC0B50095402F /* Supporting Files */,
 			);
 			path = AratanTests;
@@ -244,8 +248,10 @@
 				A315229C1A6F7E5C00D7A760 /* word.plist in Resources */,
 				1E8C52D71A6BC0B50095402F /* Main.storyboard in Resources */,
 				1E8C52F71A6BC0C60095402F /* AcousticModelSpanish.bundle in Resources */,
+				1E8C53101A6F34C90095402F /* correct.png in Resources */,
 				1E8C52F61A6BC0C60095402F /* AcousticModelEnglish.bundle in Resources */,
 				1E8C52DC1A6BC0B50095402F /* LaunchScreen.xib in Resources */,
+				1E8C53111A6F34C90095402F /* wrong.png in Resources */,
 				1E8C52D91A6BC0B50095402F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,8 +272,8 @@
 			files = (
 				1E8C53061A6D33E40095402F /* QuestionModel.swift in Sources */,
 				1E8C530B1A6DF54F0095402F /* QuizViewController.swift in Sources */,
-				1E8C52D41A6BC0B50095402F /* ViewController.swift in Sources */,
 				1E8C52FE1A6BF95A0095402F /* WordsRecognition.swift in Sources */,
+				1E8C53141A6F823B0095402F /* TopViewController.swift in Sources */,
 				1E8C52D21A6BC0B50095402F /* Aratan.xcdatamodeld in Sources */,
 				1E8C53041A6D33C10095402F /* QuizModel.swift in Sources */,
 				1E8C52CF1A6BC0B50095402F /* AppDelegate.swift in Sources */,
