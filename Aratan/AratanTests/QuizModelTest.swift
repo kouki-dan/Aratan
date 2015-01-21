@@ -37,6 +37,7 @@ class QuizModelTest: XCTestCase {
         quizModel = QuizModel(questions)
         
         quizModel.preSaveWords()
+        quizModel.loadQuiz(1)
     }
     
     override func tearDown() {

@@ -54,14 +54,26 @@ class QuizModel{
     func loadQuiz(level:Int){
         // Please implement this.
         // Load a words from CoreData and construct this questions array.
-/*
+
         let appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
         let context: NSManagedObjectContext = appDelegate.managedObjectContext!
         
-        var request = NSFetchRequest(entityName: "Model")
+        var request = NSFetchRequest(entityName: "Word")
         request.predicate = NSPredicate(format: "level = %d", level)
-        /*
+    /*
+        //let wordEntity: NSEntityDescription! = NSEntityDescription.entityForName("Word", inManagedObjectContext: context)
         
+        var request = NSFetchRequest(entityName: "Word")
+        //request.predicate = NSPredicate(format: "level == %d", level)
+        
+        println(request)
+        println("-----")
+        println(context)
+        
+        println("-----")
+        var error:NSErrorPointer! = NSErrorPointer()
+        let results = context.executeFetchRequest(request, error: error)
+            
         if let results = context.executeFetchRequest(request, error: nil) {
             var checkRandomNumber = Dictionary<Int,String>()
             
@@ -92,10 +104,10 @@ class QuizModel{
                 question.words = words
                 question.answerIndex = answerIndex
                 question.answerMeaning = answerMeaning
-                self.questions.append(question)
+                //self.questions.append(question)
             }
         }
-*/
+
         
 */
         // The below is code for testing
