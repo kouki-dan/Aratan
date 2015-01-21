@@ -25,7 +25,6 @@ class WordsRecognition: NSObject, OEEventsObserverDelegate{
     init(_ wordsArray:[[String]]){
         self.wordsArray = wordsArray
         super.init()
-
         
         OEPocketsphinxController.sharedInstance().setActive(true, error: nil)
         openEarsEventsObserver.delegate = self
