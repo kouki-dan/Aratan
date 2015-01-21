@@ -167,6 +167,19 @@
                                     <constraint firstAttribute="trailing" secondItem="I9P-zQ-wPO" secondAttribute="trailing" constant="5" id="gU7-36-hAc"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="113-Vx-FjS">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="correct.png" translatesAutoresizingMaskIntoConstraints="NO" id="uLg-Z1-LSX">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.88874741022099446" green="0.88874741022099446" blue="0.88874741022099446" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Xyh-dh-HsB"/>
+                                    <constraint firstAttribute="height" constant="300" id="oow-nT-yNm"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -174,6 +187,7 @@
                             <constraint firstItem="JP1-ra-h7K" firstAttribute="top" secondItem="rtW-vN-DmL" secondAttribute="bottom" id="4Sy-hj-Vqb"/>
                             <constraint firstItem="oPx-Wg-3II" firstAttribute="height" secondItem="9gm-Po-fpg" secondAttribute="height" id="4WJ-Uh-yVb"/>
                             <constraint firstItem="ZTJ-D6-OSk" firstAttribute="top" secondItem="Usf-ib-Vr2" secondAttribute="bottom" id="5bq-MG-kXV"/>
+                            <constraint firstAttribute="centerX" secondItem="113-Vx-FjS" secondAttribute="centerX" id="5eZ-Oe-kkJ"/>
                             <constraint firstItem="UVR-cb-K1M" firstAttribute="leading" secondItem="QRI-Qa-W7C" secondAttribute="trailing" id="5or-cD-gij"/>
                             <constraint firstItem="JP1-ra-h7K" firstAttribute="height" secondItem="QRI-Qa-W7C" secondAttribute="height" id="7Dd-zQ-er2"/>
                             <constraint firstItem="gjp-Sr-Q0t" firstAttribute="leading" secondItem="9gm-Po-fpg" secondAttribute="trailing" id="93N-3H-f3Y"/>
@@ -192,6 +206,7 @@
                             <constraint firstItem="JP1-ra-h7K" firstAttribute="leading" secondItem="UVR-cb-K1M" secondAttribute="trailing" id="Mub-VA-wgJ"/>
                             <constraint firstItem="UVR-cb-K1M" firstAttribute="top" secondItem="rtW-vN-DmL" secondAttribute="bottom" id="N8a-AC-5Gi"/>
                             <constraint firstItem="QRI-Qa-W7C" firstAttribute="leading" secondItem="yD3-0q-2Iu" secondAttribute="leadingMargin" id="Ogs-Vc-K4a"/>
+                            <constraint firstAttribute="centerY" secondItem="113-Vx-FjS" secondAttribute="centerY" id="Qza-fM-XJa"/>
                             <constraint firstItem="rtW-vN-DmL" firstAttribute="top" secondItem="9gm-Po-fpg" secondAttribute="bottom" id="XPP-kD-0HN"/>
                             <constraint firstItem="QRI-Qa-W7C" firstAttribute="height" secondItem="9gm-Po-fpg" secondAttribute="height" id="Y78-bS-Dth"/>
                             <constraint firstItem="EbG-7x-Ea9" firstAttribute="width" secondItem="gjp-Sr-Q0t" secondAttribute="width" id="a8H-cn-dFO"/>
@@ -231,6 +246,8 @@
                         <outlet property="answer2" destination="gzb-Bh-JTd" id="UD0-an-nsy"/>
                         <outlet property="answer3" destination="JWt-tk-hOw" id="pQW-35-duE"/>
                         <outlet property="answer4" destination="I9P-zQ-wPO" id="pU3-bg-3gv"/>
+                        <outlet property="correctStatusImageView" destination="uLg-Z1-LSX" id="8ty-Oz-05F"/>
+                        <outlet property="correctStatusView" destination="113-Vx-FjS" id="p2b-Ve-6XZ"/>
                         <outlet property="meaning" destination="8AE-cc-Whf" id="i4F-9T-mXJ"/>
                     </connections>
                 </viewController>
@@ -239,4 +256,7 @@
             <point key="canvasLocation" x="1143" y="266"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="correct.png" width="800" height="800"/>
+    </resources>
 </document>

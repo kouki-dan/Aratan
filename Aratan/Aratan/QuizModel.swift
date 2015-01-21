@@ -21,11 +21,15 @@ class QuizModel{
     }
     
     func getNowQuestion() -> QuestionModel?{
+        if questions.count <= index {
+            return nil
+        }
         return questions[index]
     }
     
     func nextQuestion() -> QuestionModel?{
-        return questions[++index]
+        index += 1
+        return getNowQuestion()
     }
     
     func getWordsArray() -> [[String]] {
@@ -57,6 +61,7 @@ class QuizModel{
         
         var request = NSFetchRequest(entityName: "Model")
         request.predicate = NSPredicate(format: "level = %d", level)
+        /*
         
         if let results = context.executeFetchRequest(request, error: nil) {
             var checkRandomNumber = Dictionary<Int,String>()
@@ -80,6 +85,7 @@ class QuizModel{
             println("データがとれてないよ")
         }
         
+*/
         // The below is code for testing
         // TODO: Write!!
         
