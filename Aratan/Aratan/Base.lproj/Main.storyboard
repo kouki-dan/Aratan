@@ -331,6 +331,32 @@
             </objects>
             <point key="canvasLocation" x="1190" y="177"/>
         </scene>
+        <!--Result View Controller-->
+        <scene sceneID="2fi-t0-24k">
+            <objects>
+                <viewController id="YQb-id-v1H" customClass="ResultViewController" customModule="Aratan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hvs-jg-Yue"/>
+                        <viewControllerLayoutGuide type="bottom" id="FOC-Ua-rGq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1H4-lh-pJc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="りざると" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Trp-V9-qYq">
+                                <rect key="frame" x="266" y="51" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DQ9-gj-ozS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2012" y="177"/>
+        </scene>
         <!--Table View Controller-->
         <scene sceneID="5wQ-17-Gc8">
             <objects>

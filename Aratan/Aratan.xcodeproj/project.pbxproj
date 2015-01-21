@@ -24,6 +24,7 @@
 		1E8C53101A6F34C90095402F /* correct.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8C530E1A6F34C90095402F /* correct.png */; };
 		1E8C53111A6F34C90095402F /* wrong.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8C530F1A6F34C90095402F /* wrong.png */; };
 		1E8C53141A6F823B0095402F /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C53131A6F823B0095402F /* TopViewController.swift */; };
+		1EA58A6B1A6F90D5001169D2 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA58A6A1A6F90D5001169D2 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		1E8C530E1A6F34C90095402F /* correct.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = correct.png; sourceTree = "<group>"; };
 		1E8C530F1A6F34C90095402F /* wrong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wrong.png; sourceTree = "<group>"; };
 		1E8C53131A6F823B0095402F /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		1EA58A6A1A6F90D5001169D2 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				1E8C52FD1A6BF95A0095402F /* WordsRecognition.swift */,
 				1E8C53131A6F823B0095402F /* TopViewController.swift */,
 				1E8C52FF1A6D280F0095402F /* QuizViewController.swift */,
+				1EA58A6A1A6F90D5001169D2 /* ResultViewController.swift */,
 				1E8C53031A6D33C10095402F /* QuizModel.swift */,
 				1E8C53051A6D33E40095402F /* QuestionModel.swift */,
 				1E8C52D51A6BC0B50095402F /* Main.storyboard */,
@@ -265,6 +268,7 @@
 				1E8C53061A6D33E40095402F /* QuestionModel.swift in Sources */,
 				1E8C530B1A6DF54F0095402F /* QuizViewController.swift in Sources */,
 				1E8C52FE1A6BF95A0095402F /* WordsRecognition.swift in Sources */,
+				1EA58A6B1A6F90D5001169D2 /* ResultViewController.swift in Sources */,
 				1E8C53141A6F823B0095402F /* TopViewController.swift in Sources */,
 				1E8C52D21A6BC0B50095402F /* Aratan.xcdatamodeld in Sources */,
 				1E8C53041A6D33C10095402F /* QuizModel.swift in Sources */,
