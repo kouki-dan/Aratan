@@ -44,7 +44,6 @@ class TopViewController: UIViewController, UIActionSheetDelegate {
         self.level = level
         
         levelButton.setTitle("Level \(level)", forState: UIControlState.Normal)
-        
     }
     
     func levelSelect(level:Int){
@@ -79,7 +78,6 @@ class TopViewController: UIViewController, UIActionSheetDelegate {
         })
         actionSheet.addAction(cancelAction)
 
-        
         self.presentViewController(actionSheet, animated: true, completion: nil)
 
     }

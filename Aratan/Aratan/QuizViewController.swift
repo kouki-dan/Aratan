@@ -98,7 +98,13 @@ class QuizViewController: UIViewController, WordsRecognitionDelegate {
     }
     
     func finish(){
-        //Some processing
+        self.performSegueWithIdentifier("QuizToResult", sender: self)
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "QuizToResult" {
+            let destination = segue.destinationViewController as ResultViewController
+            destination.quizResult = self.quiz
+        }
     }
     
     func recognizedWord(word: String) {

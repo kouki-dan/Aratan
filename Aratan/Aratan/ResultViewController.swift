@@ -9,7 +9,8 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-
+    var quizResult:QuizModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

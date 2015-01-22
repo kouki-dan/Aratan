@@ -325,6 +325,7 @@
                         <outlet property="correctStatusImageView" destination="uLg-Z1-LSX" id="8ty-Oz-05F"/>
                         <outlet property="correctStatusView" destination="113-Vx-FjS" id="p2b-Ve-6XZ"/>
                         <outlet property="meaning" destination="8AE-cc-Whf" id="i4F-9T-mXJ"/>
+                        <segue destination="YQb-id-v1H" kind="show" identifier="QuizToResult" id="pbq-TD-PWS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="le3-A5-PAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -343,8 +344,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qxe-YA-b8e">
+                                <rect key="frame" x="0.0" y="95" width="600" height="353"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0cf-fc-Kxf">
+                                <rect key="frame" x="27" y="456" width="547" height="119"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1h-7j-Nfo">
+                                        <rect key="frame" x="74" y="40" width="73" height="30"/>
+                                        <state key="normal" title="Quit">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGD-Q0-uz2">
+                                        <rect key="frame" x="405" y="40" width="64" height="30"/>
+                                        <state key="normal" title="Again">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="りざると" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Trp-V9-qYq">
-                                <rect key="frame" x="266" y="51" width="68" height="21"/>
+                                <rect key="frame" x="266" y="40" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -355,7 +378,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQ9-gj-ozS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2012" y="177"/>
+            <point key="canvasLocation" x="2029" y="177"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="5wQ-17-Gc8">
@@ -381,7 +404,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKb-84-ub2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1190" y="926"/>
+            <point key="canvasLocation" x="1190" y="1030"/>
         </scene>
     </scenes>
     <resources>
