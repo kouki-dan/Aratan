@@ -9,24 +9,27 @@
 import Foundation
 
 class QuestionModel{
-    var words:[String]
+    var words:[Word]
     var answerIndex:Int
     var answerMeaning:String
+    var answerFlag:Bool
     
     init(){
         self.words = []
         self.answerIndex = 0
         self.answerMeaning = ""
+        self.answerFlag = false
     }
     
-    init(_ questionWord:String,_ words:[String],_ answerIndex:Int,_ answerMeaning:String){
+    init(_ words:[Word],_ answerIndex:Int,_ answerMeaning:String){
         self.words = words
         self.answerIndex = answerIndex
         self.answerMeaning = answerMeaning
+        self.answerFlag = false
     }
 
     func checkAnswer(word:String) -> Bool {
-        if word == words[answerIndex] {
+        if word == words[answerIndex].word {
             return true
         }
         return false

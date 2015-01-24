@@ -35,7 +35,12 @@ class QuizModel{
     func getWordsArray() -> [[String]] {
         var wordsArray:[[String]] = []
         for question in questions {
-            var words = question.words
+            var wordsString:[String] = []
+            for word in question.words {
+                wordsString.append(word.word)
+            }
+            
+            var words = wordsString
             words.append("PASS")
             wordsArray.append(words)
         }
@@ -65,56 +70,38 @@ class QuizModel{
         request.entity = wordEntity
         request.predicate = NSPredicate(format: "level = %d", level)
         var error:NSErrorPointer! = NSErrorPointer()
-/*
+
         if let results = context.executeFetchRequest(request, error: nil) {
-            var checkRandomNumber = Dictionary<Int,String>()
+            for var j = 0; j < 10; j++ {
+                var checkRandomNumber = Dictionary<Int,String>()
+                var answerWordIndex = Int(arc4random() % UInt32(results.count))
+                checkRandomNumber[answerWordIndex] = "already exists"
             
-            var answerWordIndex = Int(arc4random() % UInt32(results.count))
-            checkRandomNumber[answerWordIndex] = "already exists"
-            
-            let wordModel = results[answerWordIndex] as Word
-            let question = QuestionModel()
-            question.answerIndex = answerWordIndex
-            question.answerMeaning = wordModel.answerMeaning
-            question.answerFlag = false
-            
-            var words:[Word] = []
-            words.append(wordModel)
-            
-            for var i = 0; i < 3; i++ {
-                var randomNumver = Int(arc4random() % UInt32(results.count))
-                if let tmp = checkRandomNumber[randomNumver] {
-                    continue
-                }
-                checkRandomNumber[randomNumver] = "already exists"
-                let wordModel = results[randomNumver] as Word
+                let wordModel = results[answerWordIndex] as Word
+                let question = QuestionModel()
+                question.answerIndex = 0
+                question.answerMeaning = wordModel.answerMeaning
+                
+                var words:[Word] = []
                 words.append(wordModel)
-            }
             
-            question.words = words
-            self.questions.append(question)
+                for var i = 0; i < 3; i++ {
+                    var randomNumver = Int(arc4random() % UInt32(results.count))
+                    if let tmp = checkRandomNumber[randomNumver] {
+                        i = i - 1
+                        continue
+                    }
+                    checkRandomNumber[randomNumver] = "already exists"
+                    let word = results[randomNumver] as Word
+                    words.append(word)
+                }
+            
+                question.words = words
+                self.questions.append(question)
+            }
         }
-*/
-
-        let wordsArray = [
-            ["WORD", "ALOUD", "SPEAK", "TANGO"],
-            ["TEST", "PLAY", "FIX", "SUPER"],
-            ["HAVE", "RICH", "GOOD", "PYTHON"],
-            ["PRODUCT", "SCIENCE", "HEAD", "MAINTAIN"],
-            ["TRAIN", "CREED", "STATUE", "LIBERTY"],
-            ["REALIZE", "OBJECT", "ART", "ABSTRACT"],
-            ["IMPULSE", "SOMETHING", "SALE", "LUXURIES"],
-            ["ANTICIPATE", "EMPLOY", "CUT", "COMPETENT"],
-            ["BIRTHRATE", "STEADILY", "INHABITANT", "MUCH"],
-        ]
-        for words in wordsArray {
-            let question = QuestionModel()
-            question.words = words
-            question.answerMeaning = words[0]
-            self.questions.append(question)
-        }
-
         
+
         // Until here
     }
     
@@ -122,7 +109,7 @@ class QuizModel{
         let filePath = NSBundle.mainBundle().pathForResource("word.plist", ofType: nil)
         let dic = NSDictionary(contentsOfFile: filePath!)
         
-        for var i = 1; i < dic!.count; i++ {
+        for var i = 1; i <= dic!.count; i++ {
             var item: NSArray  = dic![String(i)]! as NSArray
             self.insertData(item)
         }
