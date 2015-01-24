@@ -44,6 +44,7 @@ class QuizViewController: UIViewController, WordsRecognitionDelegate {
         if quiz == nil {
             quiz = QuizModel()
             // It is for test.
+            //quiz.preSaveWords()
             quiz.loadQuiz(1)
         }
         
@@ -124,7 +125,7 @@ class QuizViewController: UIViewController, WordsRecognitionDelegate {
         if let question = quiz.getNowQuestion() {
             meaning.text = question.answerMeaning
             for i in 0..<answers.count {
-                answers[i].text = question.words[i]
+                answers[i].text = question.words[i].word
             }
         }
     }
