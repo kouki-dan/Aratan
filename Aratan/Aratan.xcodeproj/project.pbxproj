@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E8726131A74EE4800502AE3 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8726121A74EE4800502AE3 /* logo.png */; };
+		1E8726191A74EEA100502AE3 /* level1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8726141A74EEA100502AE3 /* level1.png */; };
+		1E87261A1A74EEA100502AE3 /* level2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8726151A74EEA100502AE3 /* level2.png */; };
+		1E87261C1A74EEA100502AE3 /* level4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8726171A74EEA100502AE3 /* level4.png */; };
+		1E87261D1A74EEA100502AE3 /* level5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8726181A74EEA100502AE3 /* level5.png */; };
+		1E87261F1A74EEAF00502AE3 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E87261E1A74EEAF00502AE3 /* start.png */; };
+		1E8726211A74F01700502AE3 /* check_words.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8726201A74F01700502AE3 /* check_words.png */; };
+		1E8726271A74F45100502AE3 /* level3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8726261A74F45100502AE3 /* level3.png */; };
 		1E8C52CF1A6BC0B50095402F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C52CE1A6BC0B50095402F /* AppDelegate.swift */; };
 		1E8C52D21A6BC0B50095402F /* Aratan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C52D01A6BC0B50095402F /* Aratan.xcdatamodeld */; };
 		1E8C52D71A6BC0B50095402F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E8C52D51A6BC0B50095402F /* Main.storyboard */; };
@@ -38,6 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E8726121A74EE4800502AE3 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		1E8726141A74EEA100502AE3 /* level1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level1.png; sourceTree = "<group>"; };
+		1E8726151A74EEA100502AE3 /* level2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level2.png; sourceTree = "<group>"; };
+		1E8726171A74EEA100502AE3 /* level4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level4.png; sourceTree = "<group>"; };
+		1E8726181A74EEA100502AE3 /* level5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level5.png; sourceTree = "<group>"; };
+		1E87261E1A74EEAF00502AE3 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
+		1E8726201A74F01700502AE3 /* check_words.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check_words.png; sourceTree = "<group>"; };
+		1E8726261A74F45100502AE3 /* level3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level3.png; sourceTree = "<group>"; };
 		1E8C52C91A6BC0B50095402F /* Aratan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aratan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E8C52CD1A6BC0B50095402F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E8C52CE1A6BC0B50095402F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,12 +127,18 @@
 				1E8C52FF1A6D280F0095402F /* QuizViewController.swift */,
 				1EA58A6A1A6F90D5001169D2 /* ResultViewController.swift */,
 				1E8C53031A6D33C10095402F /* QuizModel.swift */,
-				A315229E1A6F969000D7A760 /* Word.swift */,
 				1E8C53051A6D33E40095402F /* QuestionModel.swift */,
-				A315229B1A6F7E5C00D7A760 /* word.plist */,
 				1E8C52D51A6BC0B50095402F /* Main.storyboard */,
 				1E8C530E1A6F34C90095402F /* correct.png */,
 				1E8C530F1A6F34C90095402F /* wrong.png */,
+				1E8726121A74EE4800502AE3 /* logo.png */,
+				1E87261E1A74EEAF00502AE3 /* start.png */,
+				1E8726141A74EEA100502AE3 /* level1.png */,
+				1E8726151A74EEA100502AE3 /* level2.png */,
+				1E8726261A74F45100502AE3 /* level3.png */,
+				1E8726171A74EEA100502AE3 /* level4.png */,
+				1E8726181A74EEA100502AE3 /* level5.png */,
+				1E8726201A74F01700502AE3 /* check_words.png */,
 				1E8C52D81A6BC0B50095402F /* Images.xcassets */,
 				1E8C52DA1A6BC0B50095402F /* LaunchScreen.xib */,
 				1E8C52D01A6BC0B50095402F /* Aratan.xcdatamodeld */,
@@ -243,10 +265,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A315229C1A6F7E5C00D7A760 /* word.plist in Resources */,
 				1E8C52D71A6BC0B50095402F /* Main.storyboard in Resources */,
+				1E8726211A74F01700502AE3 /* check_words.png in Resources */,
+				1E87261D1A74EEA100502AE3 /* level5.png in Resources */,
+				1E87261C1A74EEA100502AE3 /* level4.png in Resources */,
 				1E8C52F71A6BC0C60095402F /* AcousticModelSpanish.bundle in Resources */,
+				1E8726271A74F45100502AE3 /* level3.png in Resources */,
+				1E8726191A74EEA100502AE3 /* level1.png in Resources */,
+				1E87261F1A74EEAF00502AE3 /* start.png in Resources */,
 				1E8C53101A6F34C90095402F /* correct.png in Resources */,
+				1E8726131A74EE4800502AE3 /* logo.png in Resources */,
+				1E87261A1A74EEA100502AE3 /* level2.png in Resources */,
 				1E8C52F61A6BC0C60095402F /* AcousticModelEnglish.bundle in Resources */,
 				1E8C52DC1A6BC0B50095402F /* LaunchScreen.xib in Resources */,
 				1E8C53111A6F34C90095402F /* wrong.png in Resources */,
@@ -269,7 +298,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E8C53061A6D33E40095402F /* QuestionModel.swift in Sources */,
-				A315229F1A6F969000D7A760 /* Word.swift in Sources */,
 				1E8C530B1A6DF54F0095402F /* QuizViewController.swift in Sources */,
 				1E8C52FE1A6BF95A0095402F /* WordsRecognition.swift in Sources */,
 				1EA58A6B1A6F90D5001169D2 /* ResultViewController.swift in Sources */,
