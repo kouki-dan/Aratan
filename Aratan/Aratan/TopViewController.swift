@@ -92,5 +92,9 @@ class TopViewController: UIViewController, UIActionSheetDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func backFromListView(segue:UIStoryboardSegue){
+        println("戻ってきたよ")
+    }
 
 }
