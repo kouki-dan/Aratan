@@ -72,37 +72,41 @@ class QuizModel{
         var error:NSErrorPointer! = NSErrorPointer()
 
         if let results = context.executeFetchRequest(request, error: nil) {
-            for var j = 0; j < 10; j++ {
+            for j in 0..<10 {
                 var checkRandomNumber = Dictionary<Int,String>()
-                var answerWordIndex = Int(arc4random() % UInt32(results.count))
-                checkRandomNumber[answerWordIndex] = "already exists"
             
-                let wordModel = results[answerWordIndex] as Word
-                let question = QuestionModel()
-                question.answerIndex = 0
-                question.answerMeaning = wordModel.answerMeaning
+                var answerWordIndex = self.getRandomIndex(results.count)
+                checkRandomNumber[answerWordIndex] = "already exists"
+                let answerWordModel = results[answerWordIndex] as Word
                 
                 var words:[Word] = []
-                words.append(wordModel)
+                words.append(answerWordModel)
             
                 for var i = 0; i < 3; i++ {
-                    var randomNumver = Int(arc4random() % UInt32(results.count))
-                    if let tmp = checkRandomNumber[randomNumver] {
+                    var randomIndex = self.getRandomIndex(results.count)
+                    if let tmp = checkRandomNumber[randomIndex] {
                         i = i - 1
                         continue
                     }
-                    checkRandomNumber[randomNumver] = "already exists"
-                    let word = results[randomNumver] as Word
-                    words.append(word)
+                    checkRandomNumber[randomIndex] = "already exists"
+                    let wordModel = results[randomIndex] as Word
+                    words.append(wordModel)
                 }
-            
+                
+                let question = QuestionModel()
                 question.words = words
+                question.answerIndex = 0
+                question.answerMeaning = answerWordModel.answerMeaning
                 self.questions.append(question)
             }
         }
         
 
         // Until here
+    }
+    
+    func getRandomIndex(maxNumber:Int) -> Int{
+        return Int(arc4random() % UInt32(maxNumber))
     }
     
     func preSaveWords() {
