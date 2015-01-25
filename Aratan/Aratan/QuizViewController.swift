@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 enum QuizStatus:Int{
     case BeforeStarted
@@ -31,6 +32,7 @@ class QuizViewController: UIViewController, WordsRecognitionDelegate {
     
     @IBOutlet weak var correctStatusView: UIView!
     @IBOutlet weak var correctStatusImageView: UIImageView!
+    @IBOutlet weak var answerView: UIView!
     
     var answers:[UILabel] = []
     var wordsRecognition:WordsRecognition!
@@ -135,6 +137,21 @@ class QuizViewController: UIViewController, WordsRecognitionDelegate {
         }
     }
     
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        super.touchesBegan(touches, withEvent: event)
+        for touch: AnyObject in touches {
+            var t: UITouch = touch as UITouch
+            if t.view.tag == self.answerView.tag {
+                println("Taped (Say the word aloud!!)")
+                let utterance = AVSpeechUtterance(string: "Tapped!")
+                utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                let talker = AVSpeechSynthesizer()
+                talker.speakUtterance(utterance)
+                // Error occured. Why!?
+            }
+        }
+    }
 
     
     override func didReceiveMemoryWarning() {

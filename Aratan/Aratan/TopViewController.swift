@@ -43,7 +43,10 @@ class TopViewController: UIViewController, UIActionSheetDelegate {
         ud.setInteger(level, forKey: "SelectedLevel")
         self.level = level
         
-        levelButton.setTitle("Level \(level)", forState: UIControlState.Normal)
+        
+        let image = UIImage(named: "level\(level).png")
+        levelButton.setImage(image, forState: UIControlState.Normal)
+        
     }
     
     func levelSelect(level:Int){

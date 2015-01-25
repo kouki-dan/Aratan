@@ -24,15 +24,6 @@
                                     <constraint firstAttribute="height" constant="107" id="eqK-Dj-OBN"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esI-Kh-aaK">
-                                <rect key="frame" x="278" y="-604" width="45" height="30"/>
-                                <state key="normal" title="Level3">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="levelChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T24-vU-A3t"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="79w-Bv-GQh">
                                 <rect key="frame" x="165" y="182" width="270" height="270"/>
                                 <subviews>
@@ -41,6 +32,9 @@
                                         <state key="normal" image="level1.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="levelChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ppV-Db-LbC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOa-vj-iQq">
                                         <rect key="frame" x="49" y="50" width="170" height="170"/>
@@ -92,7 +86,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="levelButton" destination="esI-Kh-aaK" id="a6n-rT-wIP"/>
+                        <outlet property="levelButton" destination="6q2-1f-pCc" id="Ucw-iW-bCh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
