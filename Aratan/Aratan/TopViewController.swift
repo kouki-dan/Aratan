@@ -43,7 +43,9 @@ class TopViewController: UIViewController, UIActionSheetDelegate {
         ud.setInteger(level, forKey: "SelectedLevel")
         self.level = level
         
-        levelButton.setTitle("Level \(level)", forState: UIControlState.Normal)
+        
+        let image = UIImage(named: "level\(level).png")
+        levelButton.setImage(image, forState: UIControlState.Normal)
         
     }
     
@@ -79,7 +81,6 @@ class TopViewController: UIViewController, UIActionSheetDelegate {
         })
         actionSheet.addAction(cancelAction)
 
-        
         self.presentViewController(actionSheet, animated: true, completion: nil)
 
     }
