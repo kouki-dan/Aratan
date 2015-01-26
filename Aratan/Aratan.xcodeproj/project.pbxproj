@@ -37,6 +37,10 @@
 		1E8C53111A6F34C90095402F /* wrong_old.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8C530F1A6F34C90095402F /* wrong_old.png */; };
 		1E8C53141A6F823B0095402F /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C53131A6F823B0095402F /* TopViewController.swift */; };
 		1EA58A6B1A6F90D5001169D2 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA58A6A1A6F90D5001169D2 /* ResultViewController.swift */; };
+		A315229C1A6F7E5C00D7A760 /* word.plist in Resources */ = {isa = PBXBuildFile; fileRef = A315229B1A6F7E5C00D7A760 /* word.plist */; };
+		A315229F1A6F969000D7A760 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = A315229E1A6F969000D7A760 /* Word.swift */; };
+		A3AC68F21A74E41500EE740B /* WordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AC68F11A74E41500EE740B /* WordListViewController.swift */; };
+		A3AC68F41A74E4FE00EE740B /* WordListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AC68F31A74E4FE00EE740B /* WordListViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +89,10 @@
 		1E8C530F1A6F34C90095402F /* wrong_old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wrong_old.png; sourceTree = "<group>"; };
 		1E8C53131A6F823B0095402F /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		1EA58A6A1A6F90D5001169D2 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		A315229B1A6F7E5C00D7A760 /* word.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = word.plist; sourceTree = "<group>"; };
+		A315229E1A6F969000D7A760 /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		A3AC68F11A74E41500EE740B /* WordListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordListViewController.swift; sourceTree = "<group>"; };
+		A3AC68F31A74E4FE00EE740B /* WordListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordListViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +163,8 @@
 				1E8C53131A6F823B0095402F /* TopViewController.swift */,
 				1E8C52FF1A6D280F0095402F /* QuizViewController.swift */,
 				1EA58A6A1A6F90D5001169D2 /* ResultViewController.swift */,
+				A3AC68F11A74E41500EE740B /* WordListViewController.swift */,
+				A3AC68F31A74E4FE00EE740B /* WordListViewCell.swift */,
 				1E8C53031A6D33C10095402F /* QuizModel.swift */,
 				1E8C53051A6D33E40095402F /* QuestionModel.swift */,
 				1E8C52D51A6BC0B50095402F /* Main.storyboard */,
@@ -322,10 +332,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E8C53061A6D33E40095402F /* QuestionModel.swift in Sources */,
+				A315229F1A6F969000D7A760 /* Word.swift in Sources */,
+				A3AC68F21A74E41500EE740B /* WordListViewController.swift in Sources */,
 				1E8C530B1A6DF54F0095402F /* QuizViewController.swift in Sources */,
 				1E8C52FE1A6BF95A0095402F /* WordsRecognition.swift in Sources */,
 				1EA58A6B1A6F90D5001169D2 /* ResultViewController.swift in Sources */,
 				1E8C53141A6F823B0095402F /* TopViewController.swift in Sources */,
+				A3AC68F41A74E4FE00EE740B /* WordListViewCell.swift in Sources */,
 				1E8C52D21A6BC0B50095402F /* Aratan.xcdatamodeld in Sources */,
 				1E8C53041A6D33C10095402F /* QuizModel.swift in Sources */,
 				1E8C52CF1A6BC0B50095402F /* AppDelegate.swift in Sources */,

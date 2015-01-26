@@ -35,7 +35,12 @@ class QuizModel{
     func getWordsArray() -> [[String]] {
         var wordsArray:[[String]] = []
         for question in questions {
-            var words = question.words
+            var wordsString:[String] = []
+            for word in question.words {
+                wordsString.append(word.word)
+            }
+            
+            var words = wordsString
             words.append("PASS")
             wordsArray.append(words)
         }
@@ -58,100 +63,72 @@ class QuizModel{
         let appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
         let context: NSManagedObjectContext = appDelegate.managedObjectContext!
         
-        var request = NSFetchRequest(entityName: "Word")
+        
+        let wordEntity: NSEntityDescription! = NSEntityDescription.entityForName("Word", inManagedObjectContext: context)
+        
+        let request = NSFetchRequest()
+        request.entity = wordEntity
         request.predicate = NSPredicate(format: "level = %d", level)
-    /*
-        //let wordEntity: NSEntityDescription! = NSEntityDescription.entityForName("Word", inManagedObjectContext: context)
-        
-        var request = NSFetchRequest(entityName: "Word")
-        //request.predicate = NSPredicate(format: "level == %d", level)
-        
-        println(request)
-        println("-----")
-        println(context)
-        
-        println("-----")
         var error:NSErrorPointer! = NSErrorPointer()
-        let results = context.executeFetchRequest(request, error: error)
-            
+
         if let results = context.executeFetchRequest(request, error: nil) {
-            var checkRandomNumber = Dictionary<Int,String>()
+            for j in 0..<10 {
+                var checkRandomNumber = Dictionary<Int,String>()
             
-            var firsrWordIndex = Int(arc4random() % UInt32(results.count)) + 1
-            checkRandomNumber[firsrWordIndex] = "already exists"
+                var answerWordIndex = self.getRandomIndex(results.count)
+                checkRandomNumber[answerWordIndex] = "already exists"
+                let answerWordModel = results[answerWordIndex] as Word
+                
+                var words:[Word] = []
+                words.append(answerWordModel)
             
-            var word = results[firsrWordIndex].valueForKey("word") as String
-            var answerMeaning = results[firsrWordIndex].valueForKey("answerMeaning") as String
-            var answerIndex = Int(arc4random() % 4) + 1
-            
-            var words:[String] = []
-            words[answerIndex] = word
-            
-            for var i = 0; i < 10; i++ {
-                var wordCount = 0
-                while wordCount < 3 {
-                    var randomIndex = Int(arc4random() % UInt32(results.count)) + 1
+                for var i = 0; i < 3; i++ {
+                    var randomIndex = self.getRandomIndex(results.count)
                     if let tmp = checkRandomNumber[randomIndex] {
+                        i = i - 1
                         continue
                     }
-                
                     checkRandomNumber[randomIndex] = "already exists"
-                    words[wordCount] = results[randomIndex].valueForKey("word") as String
-                    wordCount++
+                    let wordModel = results[randomIndex] as Word
+                    words.append(wordModel)
                 }
                 
                 let question = QuestionModel()
                 question.words = words
-                question.answerIndex = answerIndex
-                question.answerMeaning = answerMeaning
-                //self.questions.append(question)
+                question.answerIndex = 0
+                question.answerMeaning = answerWordModel.answerMeaning
+                self.questions.append(question)
             }
         }
-
         
-*/
-        // The below is code for testing
-        // TODO: Write!!
 
-        let wordsArray = [
-            ["WORD", "ALOUD", "SPEAK", "TANGO"],
-            ["TEST", "PLAY", "FIX", "SUPER"],
-            ["HAVE", "RICH", "GOOD", "PYTHON"],
-            ["PRODUCT", "SCIENCE", "HEAD", "MAINTAIN"],
-            ["TRAIN", "CREED", "STATUE", "LIBERTY"],
-            ["REALIZE", "OBJECT", "ART", "ABSTRACT"],
-            ["IMPULSE", "SOMETHING", "SALE", "LUXURIES"],
-            ["ANTICIPATE", "EMPLOY", "CUT", "COMPETENT"],
-            ["BIRTHRATE", "STEADILY", "INHABITANT", "MUCH"],
-        ]
-        for words in wordsArray {
-            let question = QuestionModel()
-            question.words = words
-            question.answerMeaning = words[0]
-            self.questions.append(question)
-        }
-
-        
         // Until here
     }
     
-    func preSaveWords(){
-        let appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
-        let context: NSManagedObjectContext = appDelegate.managedObjectContext!
-        
+    func getRandomIndex(maxNumber:Int) -> Int{
+        return Int(arc4random() % UInt32(maxNumber))
+    }
+    
+    func preSaveWords() {
         let filePath = NSBundle.mainBundle().pathForResource("word.plist", ofType: nil)
         let dic = NSDictionary(contentsOfFile: filePath!)
         
-        let wordData: AnyObject = NSEntityDescription.insertNewObjectForEntityForName("Word", inManagedObjectContext: context)
-        
-        for var i = 1; i < dic!.count; i++ {
+        for var i = 1; i <= dic!.count; i++ {
             var item: NSArray  = dic![String(i)]! as NSArray
-            wordData.setValue(item[0],forKey: "word")
-            wordData.setValue(item[1],forKey: "answerMeaning")
-            wordData.setValue(item[2],forKey: "level")
-            context.save(nil)
+            self.insertData(item)
         }
-        
     }
     
+    func insertData(wordArray:NSArray){
+        let appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        let context: NSManagedObjectContext = appDelegate.managedObjectContext!
+        let wordData: AnyObject = NSEntityDescription.insertNewObjectForEntityForName("Word", inManagedObjectContext: context)
+
+        let model = wordData as Aratan.Word
+        model.word = wordArray[0] as String
+        model.answerMeaning = wordArray[1] as String
+        model.level = wordArray[2] as NSNumber
+        context.save(nil)
+    }
+
 }
