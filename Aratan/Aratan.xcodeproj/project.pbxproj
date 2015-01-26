@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1E26CB9B1A760880001EFB08 /* word.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E26CB9A1A760880001EFB08 /* word.plist */; };
 		1E26CB9D1A760886001EFB08 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26CB9C1A760886001EFB08 /* Word.swift */; };
-		1E8726131A74EE4800502AE3 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8726121A74EE4800502AE3 /* logo.png */; };
 		1E8726191A74EEA100502AE3 /* level1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8726141A74EEA100502AE3 /* level1.png */; };
 		1E87261A1A74EEA100502AE3 /* level2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8726151A74EEA100502AE3 /* level2.png */; };
 		1E87261C1A74EEA100502AE3 /* level4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8726171A74EEA100502AE3 /* level4.png */; };
@@ -41,6 +40,7 @@
 		1EA58A6B1A6F90D5001169D2 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA58A6A1A6F90D5001169D2 /* ResultViewController.swift */; };
 		A3AC68F21A74E41500EE740B /* WordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AC68F11A74E41500EE740B /* WordListViewController.swift */; };
 		A3AC68F41A74E4FE00EE740B /* WordListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AC68F31A74E4FE00EE740B /* WordListViewCell.swift */; };
+		A3BF2D5B1A76114900538A46 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A3BF2D5A1A76114900538A46 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,6 @@
 /* Begin PBXFileReference section */
 		1E26CB9A1A760880001EFB08 /* word.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = word.plist; sourceTree = "<group>"; };
 		1E26CB9C1A760886001EFB08 /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
-		1E8726121A74EE4800502AE3 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		1E8726141A74EEA100502AE3 /* level1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level1.png; sourceTree = "<group>"; };
 		1E8726151A74EEA100502AE3 /* level2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level2.png; sourceTree = "<group>"; };
 		1E8726171A74EEA100502AE3 /* level4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level4.png; sourceTree = "<group>"; };
@@ -93,6 +92,7 @@
 		1EA58A6A1A6F90D5001169D2 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		A3AC68F11A74E41500EE740B /* WordListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordListViewController.swift; sourceTree = "<group>"; };
 		A3AC68F31A74E4FE00EE740B /* WordListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordListViewCell.swift; sourceTree = "<group>"; };
+		A3BF2D5A1A76114900538A46 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +122,7 @@
 				1E87262E1A74F77500502AE3 /* wrong.png */,
 				1E8C530E1A6F34C90095402F /* correct_old.png */,
 				1E8C530F1A6F34C90095402F /* wrong_old.png */,
-				1E8726121A74EE4800502AE3 /* logo.png */,
+				A3BF2D5A1A76114900538A46 /* logo.png */,
 				1E87261E1A74EEAF00502AE3 /* start.png */,
 				1E8726141A74EEA100502AE3 /* level1.png */,
 				1E8726151A74EEA100502AE3 /* level2.png */,
@@ -301,6 +301,7 @@
 				1E8726211A74F01700502AE3 /* check_words.png in Resources */,
 				1E87261D1A74EEA100502AE3 /* level5.png in Resources */,
 				1E87261C1A74EEA100502AE3 /* level4.png in Resources */,
+				A3BF2D5B1A76114900538A46 /* logo.png in Resources */,
 				1E26CB9B1A760880001EFB08 /* word.plist in Resources */,
 				1E8C52F71A6BC0C60095402F /* AcousticModelSpanish.bundle in Resources */,
 				1E8726271A74F45100502AE3 /* level3.png in Resources */,
@@ -308,7 +309,6 @@
 				1E87261F1A74EEAF00502AE3 /* start.png in Resources */,
 				1E87262F1A74F77500502AE3 /* wrong.png in Resources */,
 				1E8C53101A6F34C90095402F /* correct_old.png in Resources */,
-				1E8726131A74EE4800502AE3 /* logo.png in Resources */,
 				1E87261A1A74EEA100502AE3 /* level2.png in Resources */,
 				1E8726291A74F6C800502AE3 /* pause_button.png in Resources */,
 				1E87262D1A74F76F00502AE3 /* correct.png in Resources */,
