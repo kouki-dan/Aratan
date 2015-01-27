@@ -374,15 +374,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qxe-YA-b8e">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qxe-YA-b8e">
                                 <rect key="frame" x="27" y="132" width="547" height="393"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ue2-6y-6KQ">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="55" id="Ue2-6y-6KQ">
                                         <rect key="frame" x="0.0" y="0.0" width="568" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ue2-6y-6KQ" id="hpG-A9-gI1">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wooooooooooooord" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMV-KC-cQW">
+                                                    <rect key="frame" x="58" y="10" width="419" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="wgU-OD-dsT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="small_correct.png" translatesAutoresizingMaskIntoConstraints="NO" id="qW6-JX-tFh">
+                                                    <rect key="frame" x="485" y="4" width="47" height="47"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="qW6-JX-tFh" secondAttribute="height" multiplier="1:1" id="X4Y-ZA-IjG"/>
+                                                        <constraint firstAttribute="width" constant="47" id="gT5-ho-cYg"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot.png" translatesAutoresizingMaskIntoConstraints="NO" id="4qS-14-VuF">
+                                                    <rect key="frame" x="21" y="21" width="13" height="13"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="4qS-14-VuF" secondAttribute="height" multiplier="1:1" id="HrY-m3-0NW"/>
+                                                        <constraint firstAttribute="width" constant="13" id="n89-WV-bbs"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qW6-JX-tFh" secondAttribute="trailing" constant="7" id="0cG-yt-ol0"/>
+                                                <constraint firstItem="4qS-14-VuF" firstAttribute="leading" secondItem="hpG-A9-gI1" secondAttribute="leadingMargin" constant="13" id="XvS-6t-N8o"/>
+                                                <constraint firstAttribute="centerY" secondItem="qW6-JX-tFh" secondAttribute="centerY" id="b8s-6m-Kfi"/>
+                                                <constraint firstAttribute="centerX" secondItem="4qS-14-VuF" secondAttribute="centerX" id="ef7-yq-Nj5"/>
+                                                <constraint firstItem="4qS-14-VuF" firstAttribute="leading" secondItem="hpG-A9-gI1" secondAttribute="leadingMargin" constant="13" id="kQ7-My-y4c"/>
+                                                <constraint firstAttribute="centerY" secondItem="4qS-14-VuF" secondAttribute="centerY" id="kdy-2r-r5b"/>
+                                                <constraint firstItem="qW6-JX-tFh" firstAttribute="leading" secondItem="aMV-KC-cQW" secondAttribute="trailing" constant="8" id="ozv-u2-uLa"/>
+                                                <constraint firstAttribute="centerY" secondItem="aMV-KC-cQW" secondAttribute="centerY" id="vBP-Pl-lf5"/>
+                                                <constraint firstItem="aMV-KC-cQW" firstAttribute="leading" secondItem="4qS-14-VuF" secondAttribute="trailing" constant="24" id="xaX-zk-8z8"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="XvS-6t-N8o"/>
+                                                    <exclude reference="ef7-yq-Nj5"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -452,7 +494,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQ9-gj-ozS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2029" y="177"/>
+            <point key="canvasLocation" x="2029" y="173"/>
         </scene>
         <!--Word List View Controller-->
         <scene sceneID="kzY-ag-7ew">
@@ -527,6 +569,7 @@
     <resources>
         <image name="check_words.png" width="1499" height="344"/>
         <image name="correct.png" width="1300" height="1300"/>
+        <image name="dot.png" width="97" height="97"/>
         <image name="level1.png" width="1585" height="1612"/>
         <image name="level5_text.png" width="754" height="248"/>
         <image name="logo.png" width="2165" height="677"/>
@@ -534,6 +577,7 @@
         <image name="pause_button.png" width="188" height="188"/>
         <image name="result.png" width="1048" height="330"/>
         <image name="retry.png" width="913" height="344"/>
+        <image name="small_correct.png" width="167" height="167"/>
         <image name="start.png" width="1043" height="1043"/>
         <image name="top.png" width="913" height="344"/>
     </resources>
