@@ -29,7 +29,7 @@ class QuestionModel{
     }
 
     func checkAnswer(word:String) -> Bool {
-        if word == words[answerIndex].word {
+        if word.uppercaseString == words[answerIndex].word.uppercaseString {
             return true
         }
         return false

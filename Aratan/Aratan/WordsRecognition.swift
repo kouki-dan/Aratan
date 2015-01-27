@@ -35,7 +35,12 @@ class WordsRecognition: NSObject, OEEventsObserverDelegate{
         for words in self.wordsArray{
             let key = join("-", words)
             
-            let err = lmGenerator.generateLanguageModelFromArray(words,
+            var uppercaseWords:[String] = []
+            for word in words {
+                uppercaseWords.append(word.uppercaseString)
+            }
+            
+            let err = lmGenerator.generateLanguageModelFromArray(uppercaseWords,
                 withFilesNamed: key,
                 forAcousticModelAtPath: amPath)
             if err == nil{
