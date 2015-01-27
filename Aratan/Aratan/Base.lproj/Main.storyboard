@@ -378,26 +378,26 @@
                                 <rect key="frame" x="27" y="132" width="547" height="393"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="55" id="Ue2-6y-6KQ">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Word" rowHeight="55" id="Ue2-6y-6KQ">
                                         <rect key="frame" x="0.0" y="0.0" width="568" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ue2-6y-6KQ" id="hpG-A9-gI1">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wooooooooooooord" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMV-KC-cQW">
-                                                    <rect key="frame" x="58" y="10" width="419" height="35"/>
+                                                    <rect key="frame" x="58" y="10" width="436" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="wgU-OD-dsT"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="small_correct.png" translatesAutoresizingMaskIntoConstraints="NO" id="qW6-JX-tFh">
-                                                    <rect key="frame" x="485" y="4" width="47" height="47"/>
+                                                    <rect key="frame" x="502" y="12" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="qW6-JX-tFh" secondAttribute="height" multiplier="1:1" id="X4Y-ZA-IjG"/>
-                                                        <constraint firstAttribute="width" constant="47" id="gT5-ho-cYg"/>
+                                                        <constraint firstAttribute="width" constant="30" id="gT5-ho-cYg"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot.png" translatesAutoresizingMaskIntoConstraints="NO" id="4qS-14-VuF">
@@ -428,6 +428,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="YQb-id-v1H" id="1fe-E7-dW0"/>
+                                    <outlet property="delegate" destination="YQb-id-v1H" id="zTG-5J-Mhc"/>
+                                </connections>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="level5_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="hDB-UM-SpF">
                                 <rect key="frame" x="330" y="35" width="244" height="81"/>
