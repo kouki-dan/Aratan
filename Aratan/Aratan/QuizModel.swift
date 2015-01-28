@@ -20,6 +20,10 @@ class QuizModel{
         self.questions = questions
     }
     
+    func getQuestion(index:Int) -> QuestionModel {
+        return questions[index]
+    }
+
     func getNowQuestion() -> QuestionModel?{
         if questions.count <= index {
             return nil

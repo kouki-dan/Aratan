@@ -21,6 +21,15 @@ class ResultWordTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    func correct(isCorrect:Bool){
+        if isCorrect {
+            correctImageView.image = UIImage(named: correctImagePath)
+        }
+        else {
+            correctImageView.image = UIImage(named: wrongImagePath)
+        }
+    }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

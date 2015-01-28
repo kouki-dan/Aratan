@@ -28,10 +28,20 @@ class QuestionModel{
         self.answerFlag = false
     }
 
+    func isCorrect() -> Bool {
+        return answerFlag
+    }
+    
+    func getAnswer() -> String {
+        return words[answerIndex].word
+    }
+    
     func checkAnswer(word:String) -> Bool {
         if word.uppercaseString == words[answerIndex].word.uppercaseString {
+            answerFlag = true
             return true
         }
+        answerFlag = false
         return false
     }
 }

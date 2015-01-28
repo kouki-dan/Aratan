@@ -13,7 +13,9 @@ class ResultViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -23,12 +25,20 @@ class ResultViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return 1
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        if let questionCount = quizResult?.questions.count{
+            return questionCount
+        }
+        return 0
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Word", forIndexPath: indexPath) as UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier("Word", forIndexPath: indexPath) as ResultWordTableViewCell
         
         // Configure the cell...
+        let question = quizResult?.getQuestion(indexPath.row)
+        cell.wordLabel.text = question?.getAnswer()
+        
+        let correct = question?.isCorrect()
+        cell.correct(correct!)
         
         return cell
     }
