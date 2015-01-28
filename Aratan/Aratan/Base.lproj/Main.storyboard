@@ -543,19 +543,25 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6bV-me-beF" id="Iuw-k9-W3Y">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GwD-jB-OcN">
-                                                    <rect key="frame" x="13" y="17" width="108" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GwD-jB-OcN">
+                                                    <rect key="frame" x="13" y="13" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbh-4g-ld3">
-                                                    <rect key="frame" x="172" y="17" width="143" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbh-4g-ld3">
+                                                    <rect key="frame" x="115" y="13" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cbh-4g-ld3" firstAttribute="leading" secondItem="GwD-jB-OcN" secondAttribute="trailing" constant="60" id="1Aj-Ek-oxQ"/>
+                                                <constraint firstItem="GwD-jB-OcN" firstAttribute="leading" secondItem="Iuw-k9-W3Y" secondAttribute="leadingMargin" constant="5" id="McS-Hz-Ygk"/>
+                                                <constraint firstItem="cbh-4g-ld3" firstAttribute="top" secondItem="Iuw-k9-W3Y" secondAttribute="topMargin" constant="5" id="OxR-ZF-Kr3"/>
+                                                <constraint firstItem="GwD-jB-OcN" firstAttribute="top" secondItem="Iuw-k9-W3Y" secondAttribute="topMargin" constant="5" id="bKa-T7-JxZ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="meaningLabel" destination="cbh-4g-ld3" id="aXm-pE-P3V"/>
