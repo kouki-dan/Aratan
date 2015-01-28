@@ -414,7 +414,7 @@
                                 <rect key="frame" x="27" y="132" width="547" height="393"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Word" rowHeight="55" id="Ue2-6y-6KQ">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Word" rowHeight="55" id="Ue2-6y-6KQ" customClass="ResultWordTableViewCell" customModule="Aratan" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="568" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ue2-6y-6KQ" id="hpG-A9-gI1">
@@ -462,6 +462,10 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="correctImageView" destination="qW6-JX-tFh" id="dZi-Ob-472"/>
+                                            <outlet property="wordLabel" destination="vBP-Pl-lf5" id="XgP-D5-VGC"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <userDefinedRuntimeAttributes>

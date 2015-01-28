@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E0D2A991A788FA6005682B5 /* ResultWordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0D2A981A788FA6005682B5 /* ResultWordTableViewCell.swift */; };
 		1E26CB9B1A760880001EFB08 /* word.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E26CB9A1A760880001EFB08 /* word.plist */; };
 		1E26CB9D1A760886001EFB08 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26CB9C1A760886001EFB08 /* Word.swift */; };
 		1E3135D01A772FFF00DCFBF4 /* result.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3135CF1A772FFF00DCFBF4 /* result.png */; };
@@ -65,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E0D2A981A788FA6005682B5 /* ResultWordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultWordTableViewCell.swift; sourceTree = "<group>"; };
 		1E26CB9A1A760880001EFB08 /* word.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = word.plist; sourceTree = "<group>"; };
 		1E26CB9C1A760886001EFB08 /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		1E3135CF1A772FFF00DCFBF4 /* result.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = result.png; sourceTree = "<group>"; };
@@ -137,6 +139,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E0D2A9A1A788FB7005682B5 /* result */ = {
+			isa = PBXGroup;
+			children = (
+				1EA58A6A1A6F90D5001169D2 /* ResultViewController.swift */,
+				1E0D2A981A788FA6005682B5 /* ResultWordTableViewCell.swift */,
+			);
+			name = result;
+			sourceTree = "<group>";
+		};
 		1E3135D11A77300400DCFBF4 /* result */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,7 +214,7 @@
 				1E8C52FD1A6BF95A0095402F /* WordsRecognition.swift */,
 				1E8C53131A6F823B0095402F /* TopViewController.swift */,
 				1E8C52FF1A6D280F0095402F /* QuizViewController.swift */,
-				1EA58A6A1A6F90D5001169D2 /* ResultViewController.swift */,
+				1E0D2A9A1A788FB7005682B5 /* result */,
 				A3AC68F11A74E41500EE740B /* WordListViewController.swift */,
 				A3AC68F31A74E4FE00EE740B /* WordListViewCell.swift */,
 				1E8C53031A6D33C10095402F /* QuizModel.swift */,
@@ -388,6 +399,7 @@
 			files = (
 				1E8C53061A6D33E40095402F /* QuestionModel.swift in Sources */,
 				A3AC68F21A74E41500EE740B /* WordListViewController.swift in Sources */,
+				1E0D2A991A788FA6005682B5 /* ResultWordTableViewCell.swift in Sources */,
 				1E8C530B1A6DF54F0095402F /* QuizViewController.swift in Sources */,
 				1E8C52FE1A6BF95A0095402F /* WordsRecognition.swift in Sources */,
 				1EA58A6B1A6F90D5001169D2 /* ResultViewController.swift in Sources */,
