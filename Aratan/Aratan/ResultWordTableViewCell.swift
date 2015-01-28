@@ -13,7 +13,8 @@ let wrongImagePath = "small_wrong.png"
 
 class ResultWordTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var wordLabel: NSLayoutConstraint!
+
+    @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var correctImageView: UIImageView!
     
     override func awakeFromNib() {
