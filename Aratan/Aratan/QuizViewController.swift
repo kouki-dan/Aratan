@@ -46,7 +46,7 @@ class QuizViewController: UIViewController, WordsRecognitionDelegate {
         if quiz == nil {
             quiz = QuizModel()
             // It is for test.
-            //quiz.preSaveWords()
+            quiz.preSaveWords()
             quiz.loadQuiz(1)
         }
         
