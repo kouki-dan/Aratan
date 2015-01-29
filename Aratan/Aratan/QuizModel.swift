@@ -9,6 +9,17 @@
 import UIKit
 import CoreData
 
+extension Array {
+    func shuffle() -> [T]{
+        var list = self
+        for i in 0..<(list.count-1) {
+            let j = Int(arc4random_uniform(UInt32(list.count - i))) + i
+            swap(&list[i], &list[j])
+        }
+        return list
+    }
+}
+
 class QuizModel{
     var questions:[QuestionModel]
     var index = 0
@@ -98,8 +109,8 @@ class QuizModel{
                 }
                 
                 let question = QuestionModel()
-                question.words = words
-                question.answerIndex = 0
+                question.words = words.shuffle()
+                question.answerIndex = getAnswerIndex(question.words, answer: answerWordModel.answerMeaning)
                 question.answerMeaning = answerWordModel.answerMeaning
                 self.questions.append(question)
             }
@@ -109,11 +120,27 @@ class QuizModel{
         // Until here
     }
     
+    func getAnswerIndex(wordArray:[Word],answer:String) -> Int{
+        var index = 0
+        var i = 0
+        for wordModel in wordArray {
+            if(wordModel.answerMeaning == answer){
+               index = i
+            }
+            i++
+        }
+        
+        return index
+    }
+    
     func getRandomIndex(maxNumber:Int) -> Int{
+        println(Int(arc4random() % UInt32(maxNumber)))
         return Int(arc4random() % UInt32(maxNumber))
     }
     
     func preSaveWords() {
+        self.resetCoreData()
+        
         let filePath = NSBundle.mainBundle().pathForResource("word.plist", ofType: nil)
         let dic = NSDictionary(contentsOfFile: filePath!)
         
@@ -127,12 +154,29 @@ class QuizModel{
         let appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
         let context: NSManagedObjectContext = appDelegate.managedObjectContext!
         let wordData: AnyObject = NSEntityDescription.insertNewObjectForEntityForName("Word", inManagedObjectContext: context)
-
+        
         let model = wordData as Aratan.Word
         model.word = wordArray[0] as String
         model.answerMeaning = wordArray[1] as String
         model.level = wordArray[2] as NSNumber
         context.save(nil)
+    }
+    
+    func resetCoreData(){
+        let appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        let context: NSManagedObjectContext = appDelegate.managedObjectContext!
+        let wordEntity: NSEntityDescription! = NSEntityDescription.entityForName("Word", inManagedObjectContext: context)
+        
+        var request = NSFetchRequest()
+        request.entity = wordEntity
+        
+        var result: NSArray = context.executeFetchRequest(request, error: nil)!
+        
+        if(result.count > 0){
+            for res in result{
+                context.deleteObject(res as NSManagedObject)
+            }
+        }
     }
 
 }
