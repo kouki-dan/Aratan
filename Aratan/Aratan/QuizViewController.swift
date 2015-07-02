@@ -105,7 +105,7 @@ class QuizViewController: UIViewController, WordsRecognitionDelegate {
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "QuizToResult" {
-            let destination = segue.destinationViewController as ResultViewController
+            let destination = segue.destinationViewController as! ResultViewController
             destination.quizResult = self.quiz
         }
     }
@@ -139,10 +139,10 @@ class QuizViewController: UIViewController, WordsRecognitionDelegate {
     }
     
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        super.touchesBegan(touches, withEvent: event)
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        super.touchesBegan(touches as Set<NSObject>, withEvent: event)
         for touch: AnyObject in touches {
-            var t: UITouch = touch as UITouch
+            var t: UITouch = touch as! UITouch
             if t.view.tag == self.answerView.tag {
                 println("Taped (Say the word aloud!!)")
                 let utterance = AVSpeechUtterance(string: "Tapped!")

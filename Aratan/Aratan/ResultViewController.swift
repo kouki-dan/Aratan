@@ -31,7 +31,7 @@ class ResultViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return 0
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("Word", forIndexPath: indexPath) as ResultWordTableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier("Word", forIndexPath: indexPath) as! ResultWordTableViewCell
         
         // Configure the cell...
         let question = quizResult?.getQuestion(indexPath.row)

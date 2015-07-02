@@ -36,7 +36,7 @@ class WordListViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell:WordListViewCell = self.tableView.dequeueReusableCellWithIdentifier("customCell") as WordListViewCell
+        let cell:WordListViewCell = self.tableView.dequeueReusableCellWithIdentifier("customCell") as! WordListViewCell
         
         cell.putCell(wordsArray[indexPath.row], indexPath: indexPath)
         
@@ -44,7 +44,7 @@ class WordListViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func loadWordData(){
-        let appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        let appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         let context: NSManagedObjectContext = appDelegate.managedObjectContext!
         
         wordsArray = []
@@ -59,19 +59,19 @@ class WordListViewController: UIViewController, UITableViewDataSource, UITableVi
         if let results = context.executeFetchRequest(request, error: nil) {
             
             for res in results {
-                let wordModel = res as Aratan.Word
+                let wordModel = res as! Aratan.Word
                 self.wordsArray.append(wordModel)
             }
         }
         
     }
     
-    func setLevel(level:Int){
+    func setMyLevel(level:Int){
         self.level = level
     }
     
     func levelSelect(level:Int){
-        setLevel(level)
+        setMyLevel(level)
     }
     
     @IBAction func levelChange(sender: AnyObject) {

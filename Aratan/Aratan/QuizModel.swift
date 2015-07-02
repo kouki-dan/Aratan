@@ -75,7 +75,7 @@ class QuizModel{
         // Please implement this.
         // Load a words from CoreData and construct this questions array.
 
-        let appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        let appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         let context: NSManagedObjectContext = appDelegate.managedObjectContext!
         
         
@@ -92,7 +92,7 @@ class QuizModel{
             
                 var answerWordIndex = self.getRandomIndex(results.count)
                 checkRandomNumber[answerWordIndex] = "already exists"
-                let answerWordModel = results[answerWordIndex] as Word
+                let answerWordModel = results[answerWordIndex] as! Word
                 
                 var words:[Word] = []
                 words.append(answerWordModel)
@@ -104,7 +104,7 @@ class QuizModel{
                         continue
                     }
                     checkRandomNumber[randomIndex] = "already exists"
-                    let wordModel = results[randomIndex] as Word
+                    let wordModel = results[randomIndex] as! Word
                     words.append(wordModel)
                 }
                 
@@ -145,25 +145,25 @@ class QuizModel{
         let dic = NSDictionary(contentsOfFile: filePath!)
         
         for var i = 1; i <= dic!.count; i++ {
-            var item: NSArray  = dic![String(i)]! as NSArray
+            var item: NSArray  = dic![String(i)]!as! NSArray
             self.insertData(item)
         }
     }
     
     func insertData(wordArray:NSArray){
-        let appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        let appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         let context: NSManagedObjectContext = appDelegate.managedObjectContext!
         let wordData: AnyObject = NSEntityDescription.insertNewObjectForEntityForName("Word", inManagedObjectContext: context)
         
-        let model = wordData as Aratan.Word
-        model.word = wordArray[0] as String
-        model.answerMeaning = wordArray[1] as String
-        model.level = wordArray[2] as NSNumber
+        let model = wordData as! Aratan.Word
+        model.word = wordArray[0] as! String
+        model.answerMeaning = wordArray[1] as! String
+        model.level = wordArray[2] as! NSNumber
         context.save(nil)
     }
     
     func resetCoreData(){
-        let appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        let appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         let context: NSManagedObjectContext = appDelegate.managedObjectContext!
         let wordEntity: NSEntityDescription! = NSEntityDescription.entityForName("Word", inManagedObjectContext: context)
         
@@ -174,7 +174,7 @@ class QuizModel{
         
         if(result.count > 0){
             for res in result{
-                context.deleteObject(res as NSManagedObject)
+                context.deleteObject(res as! NSManagedObject)
             }
         }
     }

@@ -36,9 +36,9 @@ class TopViewController: UIViewController, UIActionSheetDelegate {
         }
         
         
-        self.setLevel(level)
+        self.setMyLevel(level)
     }
-    func setLevel(level:Int) {
+    func setMyLevel(level:Int) {
         let ud = NSUserDefaults.standardUserDefaults()
         ud.setInteger(level, forKey: "SelectedLevel")
         self.level = level
@@ -50,7 +50,7 @@ class TopViewController: UIViewController, UIActionSheetDelegate {
     }
     
     func levelSelect(level:Int){
-        setLevel(level)
+        setMyLevel(level)
     }
 
     @IBAction func levelChange(sender: AnyObject) {
